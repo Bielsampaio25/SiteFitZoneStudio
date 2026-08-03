@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/cadastro.css">
     <title>Cadastro Aluno</title>
 </head>
@@ -14,17 +15,18 @@
         <nav class="navbar">
             <h1 class="title">FitZone Studio</h1>
             <ul class="navlist">
-                <li>Inicio</li>
+                <li><a href="home.html">Inicio</a></li>
                 <li>Dashboard</li>
                 <li>Sobre Nós</li>
-                <img src="../assets/images.jpg" alt="Foto de perfil">
+                <li>Conta</li>
+                <img src="../image/images.jpg" alt="Foto de perfil">
             </ul>
         </nav>
     </header>
 
     <main>
-        <form action="/cadastro" method="post">
-            <div class="container">
+        <form>
++            <div class="container">
 
                 <h1>Cadastro</h1>
 
@@ -50,7 +52,7 @@
                         <div class="campo">
                             <label for="sexo">Sexo</label>
                             <select name="sexo" id="sexo">
-                                <option value="">Selecione uma opção</option>
+                                <option value="0">Selecione uma opção</option>
                                 <option value="1">Masculino</option>
                                 <option value="2">Feminino</option>
                                 <option value="3">Não-Binário</option>
@@ -121,13 +123,14 @@
                 </div>
 
                 <div class="btnCadastro">
-                    <button type="submit">Cadastrar</button>
+                    <button type="button" onclick="verificarInput(), verificarCpf(), verificarSelect()">Cadastrar</button>
+                    <p id="mensagem"></p>
                 </div>
 
             </div>
         </form>
     </main>
-
+       <script src="../js/cadastro.js"></script>
     <footer>
         <p>Endereço: Rua das Palmeiras, 245 - Pituba, Salvador</p>
         <p>Telefone: +55 (71) 99845-2713</p>
