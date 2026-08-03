@@ -1,0 +1,40 @@
+.sidebar{
+    background-color: #0B0E13;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+}
+
+#dashboard{
+    background-color: #C15B04;
+    border-radius: 2px;
+    height: 27px;
+}
+
+
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 40px;
+}
+.sidebar-content ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+.sidebar-content a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-content li{
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    
+}
