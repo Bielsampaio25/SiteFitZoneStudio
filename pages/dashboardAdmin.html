@@ -4,44 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dashboardAdmin.css">
-    <title>Inicio</title>
+    <title>Dashboard</title>
 </head>
-
 <body>
     <header>
         <nav class="navbar">
             <img src="../assets/images/imagem_logo.png" alt="" class="logo">
             <div class="perfil">
-            <img src="../assets/images/Ellipse 1.png" alt="">
-            <h1>Carlos Santana</h1>
-            <h2>Administrador</h2>
+                <img src="../assets/images/Ellipse 1.png">
+
+                <div class="perfil-texto">
+                    <h1>Carlos Santana</h1>
+                    <h2>Administrador</h2>
+                </div>
             </div>
+
         </nav>
     </header>
+
     <main>
+
         <aside class="sidebar">
+
             <div class="sidebar-content">
-            <ul>
-                <li id="dashboard">Dashboard</li>
-                <li><a href="../pages/cadastro.html">Funcionarios</a></li>
-                <li>Alunos</li>
-                <li>Financeiro</li>
-                <li>Agenda</li>
-                <li>Sair</li>
-            </ul>
+
+                <ul>
+                    <li id="dashboard">Dashboard</li>
+                    <li><a href="../pages/funcionariosAdmin.html">Funcionários</a></li>
+                    <li>Alunos</li>
+                    <li>Financeiro</li>
+                    <li>Agenda</li>
+                    <li>Sair</li>
+                </ul>
+
             </div>
+
         </aside>
-    </main>
-    <footer>
-        <hr>
-        <div class="footer-content">
-        <img src="../assets/images/imagem_logo.png" alt="">
-        <p>&copy;2026 FitZone Studio. Todos os direitos reservados. </p>
-        <a>Suporte</a>
+
+        <div class="dashboard-content">
+
+            <section class="cards-info-container">
+
+                <div class="card-info">
+                    <h2>Alunos Ativos</h2>
+                    <h1>1248</h1>
+                </div>
+
+                <div class="card-info">
+                    <h2>Funcionários Ativos</h2>
+                    <h1>42</h1>
+                </div>
+
+                <div class="card-info">
+                    <h2>Planos Vencidos</h2>
+                    <h1>52</h1>
+                </div>
+
+            </section>
+
+            <section class="graficoFinanceiro">
+
+                <h2>Receita Mensal</h2>
+
+                <canvas id="graficoFinanceiro"></canvas>
+
+            </section>
+
+            <section class="cards-info-container">
+
+                <div class="card-info">
+                    <h2>Receita</h2>
+                    <h1>R$ 28.500</h1>
+                </div>
+
+                <div class="card-info">
+                    <h2>Despesas</h2>
+                    <h1>R$ 12.700</h1>
+                </div>
+
+                <div class="card-info">
+                    <h2>Lucro</h2>
+                    <h1>R$ 15.800</h1>
+                </div>
+
+            </section>
+
         </div>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <div class="footer-content">
+
+            <img src="../assets/images/imagem_logo.png">
+
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+
+            <a href="#">Suporte</a>
+
+        </div>
+
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dashboardAdmin.js"></script>
+
 </body>
+
 </html>

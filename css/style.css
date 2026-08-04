@@ -1,82 +1,74 @@
-main {
-    width: 100%;
-    height: 100vh;
-    background-color: #111315;
-    display: flex;
-    align-items: center;
+main{
+    display:flex;
+    min-height:100vh;
+    background:#111315;
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    height: 50px;
-    color: white;
-    margin: 10px;
-    padding-left: 20px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #1A1D21;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1A1D21;
+    color:white;
 }
 
 .logo{
-    width: 430px;
-    height: 130px;
+    width:310px;
+    height:130px;
 }
 
-.navlist {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+.perfil{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-right:30px;
 }
 
-.navlist li {
-    color: white;
-    margin: 0 15px;
-    display: block;
-    padding: 15px 20px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
+.sidebar{
+    width:220px;
+    background:#0B0E13;
+    flex-shrink:0;
 }
 
-.navlist img {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+.sidebar-content{
+    padding-top:50px;
 }
 
-footer {
-    width: 100%;
-    background-color: #1A1D21;
+.sidebar-content ul{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    list-style:none;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.sidebar-content li{
+    color:white;
+    padding:10px 30px;
+    cursor:pointer;
+    font-family:Montserrat;
 }
 
-footer hr {
-    width: 100%;
+.sidebar-content a{
+    color:white;
+    text-decoration:none;
 }
 
-.footer-content img {
-    width: 460px;
-    height: 150px;
+footer{
+    background:#1A1D21;
 }
 
-.footer-content p {
-    color: white;
+.footer-content{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
 }
 
+.footer-content img{
+    width:310px;
+    height:130px;
+}
+
+.footer-content p,
 .footer-content a{
-    text-decoration: none;
-    color: white;
+    color:white;
 }
