@@ -40,14 +40,14 @@
         <form action="/cadastarFuncionario" method="post" class="formulario">
             <h1>Cadastro</h1>
             <div class="formulario-content">
-            <div class="dadosPessoais">
+            <div class="formulario-content-campos">
                 <div class="campo">
                     <label for="name">Nome Completo</label>
-                    <input type="text" name="name" id="name" placeholder="Digite seu nome completo">
+                    <input type="text" name="name" id="name" placeholder="Digite o nome completo">
                 </div>
                 <div class="campo">
                     <label for="cpf">CPF</label>
-                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu cpf">
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite o cpf">
                 </div>
                 <div class="campo">
                     <label for="dtaNascimento">Data de Nascimento</label>
@@ -64,22 +64,47 @@
                 </div>
                 <div class="campo">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu email">
+                    <input type="email" name="email" id="email" placeholder="Digite o email">
                 </div>
                 <div class="campo">
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone">
+                    <input type="tel" name="telefone" id="telefone" placeholder="Digite o telefone">
                 </div>
                 <div class="campo">
+                    <label for="rg">RG</label>
+                    <input type="text" name="rg" id="rg" placeholder="Digite o RG">
+                </div>
+                <div class="campo">
+                    <label>Data De Admissão</label>
+                    <input type="date" name="rg" id="rg" placeholder="Digite o RG">
+                </div>
+                <div class="campo">
+                    <label>Turno De Trabalho</label>
+                    <select name="turno" id="turno">
+                        <option value="0">Selecione uma opção</option>
+                        <option value="1">Matutino</option>
+                        <option value="2">Vespertino</option>
+                        <option value="3">Noturno</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label>Data De Admissão</label>
+                    <input type="date" name="rg" id="rg" placeholder="Digite o RG">
+                </div>
+            </div>
+            <div class="formulario-content-campos">
+                <div class="campo">
                     <label for="users">Nome de Usuário</label>
-                    <input type="text" name="users" id="users" placeholder="Crie seu nome de usuário">
+                    <input type="text" name="users" id="users" placeholder="Crie um nome de usuário">
                 </div>
                 <div class="campo">
                     <label for="password">Senha</label>
-                    <input type="password" name="password" id="password" placeholder="Crie sua senha">
+                    <input type="password" name="password" id="password" placeholder="Crie uma senha">
                 </div>
-            </div>
-            <div class="endereco">
+                <div class="campo">
+                    <label for="password">Salario</label>
+                    <input type="text" name="salario" id="salario" placeholder="Digite o salario">
+                </div>
                 <div class="campo">
                     <label for="cep">CEP</label>
                     <input type="text" name="cep" id="cep" placeholder="Informe seu cep">
