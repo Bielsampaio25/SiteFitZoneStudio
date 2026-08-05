@@ -24,6 +24,21 @@ main{
     margin-right:30px;
 }
 
+.perfil-texto h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.perfil-texto h2{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+}
+
+.perfil-texto-nome{
+    display: flex;
+    gap: 5px;
+}
+
 .sidebar{
     width:220px;
     background:#0B0E13;
@@ -45,7 +60,7 @@ main{
     color:white;
     padding:10px 30px;
     cursor:pointer;
-    font-family:Montserrat;
+    font-family: "Montserrat", sans-serif;
 }
 
 .sidebar-content a{

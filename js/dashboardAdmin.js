@@ -11,7 +11,12 @@ new Chart(ctx, {
             "Abr",
             "Mai",
             "Jun",
-            "Jul"
+            "Jul",
+            "Ago",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez"
 
         ],
         datasets: [{
@@ -24,7 +29,12 @@ new Chart(ctx, {
                 19000,
                 21000,
                 23500,
-                25000
+                25000,
+                0,
+                0,
+                0,
+                0,
+                0
             ],
             borderColor:"#FF6A00",
             backgroundColor:"rgba(255,106,0,0.15)",

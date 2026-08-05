@@ -1,0 +1,13 @@
+#funcionarios {
+    background: #C15B04;
+    border-radius: 5px;
+}
+
+.formulario{
+    background-color: #1A1D21;
+    display: flex;
+}
+
+.formulario h1{
+    color: white;
+}
