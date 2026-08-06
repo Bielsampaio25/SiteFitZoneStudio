@@ -68,8 +68,11 @@
     font-weight: 500;
 }
 
-.menu-tabela a {
+.menu-tabela a,
+.menu-tabela button {
     text-decoration: none;
+    all: unset;
+    cursor: pointer;
     color: #FFF;
     background-color: #FF6A00;
     padding: 10px 22px;
@@ -79,7 +82,8 @@
     transition: .2s ease;
 }
 
-.menu-tabela a:hover {
+.menu-tabela a:hover,
+.menu-tabela button:hover {
     background-color: #e55d00;
     transform: translateY(-2px);
 }
@@ -101,6 +105,35 @@ thead th {
     font-weight: 600;
     padding: 16px;
     text-align: left;
+}
+
+.menu-tabela input,
+.menu-tabela select{
+    height: 30px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 6px;
+    background: transparent;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: .25s;
+    box-sizing: border-box;
+}
+
+.menu-tabela input::placeholder{
+    color: rgba(255,255,255,.6);
+}
+
+.menu-tabela select option{
+    color: #000;
+}
+
+.menu-tabela input:focus,
+.menu-tabela select:focus{
+    border-color: #C15B04;
+    box-shadow: 0 0 10px rgba(193,91,4,.35);
 }
 
 tbody td {
