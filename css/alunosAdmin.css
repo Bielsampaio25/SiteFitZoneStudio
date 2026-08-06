@@ -1,0 +1,211 @@
+#alunos {
+    background-color: #C15B04;
+    border-radius: 8px;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cards-info-container {
+    display: flex;
+    gap: 25px;
+}
+
+.card-info {
+    flex: 1;
+    min-height: 170px;
+    background-color: #1A1D21;
+    color: #FFF;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+}
+
+.card-info:hover {
+    transform: translateY(-4px);
+}
+
+.card-info h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-info-nome {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lista-funcionarios {
+    background-color: #1A1D21;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+}
+
+.menu-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.menu-tabela h1 {
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+.menu-tabela a,
+.menu-tabela button {
+    text-decoration: none;
+    all: unset;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #FF6A00;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    transition: .2s ease;
+}
+
+.menu-tabela a:hover,
+.menu-tabela button:hover {
+    background-color: #e55d00;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+thead {
+    background-color: #3A3D41;
+}
+
+thead th {
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    padding: 16px;
+    text-align: left;
+}
+
+.nome-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nome-container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.menu-tabela input,
+.menu-tabela select{
+    height: 30px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 6px;
+    background: transparent;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: .25s;
+    box-sizing: border-box;
+}
+
+.menu-tabela input::placeholder{
+    color: rgba(255,255,255,.6);
+}
+
+.menu-tabela select option{
+    color: #000;
+}
+
+.menu-tabela input:focus,
+.menu-tabela select:focus{
+    border-color: #C15B04;
+    box-shadow: 0 0 10px rgba(193,91,4,.35);
+}
+
+tbody td {
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    padding: 14px 16px;
+    border-bottom: 1px solid #3A3D41;
+}
+
+tbody tr {
+    transition: .2s;
+}
+
+tbody tr:hover {
+    background-color: #25282C;
+}
+
+.status-ativo,
+.status-afastado,
+.status-desligado {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.status-ativo {
+    background-color: rgba(48, 119, 38, 0.15);
+    color: #30A920;
+}
+
+.status-afastado {
+    background-color: rgba(137, 129, 22, 0.15);
+    color: #EAD70C;
+}
+
+.status-desligado {
+    background-color: rgba(192, 24, 24, 0.15);
+    color: #F50C0C;
+}
+
+.tabela-acoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.tabela-acoes a,
+.tabela-acoes button {
+    border: none;
+    background: none;
+    color: #FFF;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.tabela-acoes a:hover,
+.tabela-acoes button:hover {
+    color: #FF6A00;
+}
