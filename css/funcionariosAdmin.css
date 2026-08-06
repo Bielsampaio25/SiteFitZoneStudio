@@ -107,6 +107,18 @@ thead th {
     text-align: left;
 }
 
+.nome-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nome-container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 .menu-tabela input,
 .menu-tabela select{
     height: 30px;
