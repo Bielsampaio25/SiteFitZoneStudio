@@ -31,6 +31,73 @@ main{
     font-weight: 500;
 }
 
+.foto-perfil-container{
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border: 2px dashed rgba(255,255,255,.35);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .25s;
+    overflow: hidden;
+}
+
+.foto-perfil-container:hover{
+    border-color: #C15B04;
+    background: rgba(193,91,4,.08);
+}
+
+.foto-perfil-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    padding: 15px;
+}
+
+.foto-perfil-content img{
+    width: 42px;
+    opacity: .8;
+}
+
+.foto-perfil-content h2{
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.foto-perfil-content p{
+    color: rgba(255,255,255,.6);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+}
+
+.btnMudarFoto{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnMudarFoto label{
+    padding: 8px 18px;
+    background: #C15B04;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    transition: .2s;
+}
+
+.btnMudarFoto label:hover{
+    background: #d96b0b;
+}
+
 .formulario-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,12 +153,35 @@ main{
     box-shadow: 0 0 10px rgba(193,91,4,.35);
 }
 
-.btnCadastro{
+.botoes{
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    gap: 10px;
 }
 
+.btnCancelar a{
+    width: 220px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    background: #616366;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btnCancelar a:hover{
+    background: #909192;
+    transform: translateY(-2px);
+}
 .btnCadastro button{
     width: 220px;
     height: 48px;
