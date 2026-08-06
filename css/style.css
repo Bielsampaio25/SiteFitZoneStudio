@@ -86,4 +86,5 @@ footer{
 .footer-content p,
 .footer-content a{
     color:white;
+    text-decoration: none;
 }
