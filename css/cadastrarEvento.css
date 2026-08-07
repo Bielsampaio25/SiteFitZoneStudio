@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+#agenda{
+    background: #C15B04;
+    border-radius: 6px;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    background: #111315;
+}
+
+.formulario{
+    flex: 1;
+    margin: 40px;
+    padding: 40px;
+    background: #1A1D21;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    box-sizing: border-box;
+}
+
+.formulario h1{
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.formulario-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.formulario-content-campos{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label{
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.campo input,
+.campo select{
+    width: 100%;
+    height: 44px;
+    padding: 0 15px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 6px;
+    background: transparent;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: .25s;
+    box-sizing: border-box;
+}
+
+.campo input::placeholder{
+    color: rgba(255,255,255,.6);
+}
+
+.campo select option{
+    color: #000;
+}
+
+.campo input:focus,
+.campo select:focus{
+    border-color: #C15B04;
+    box-shadow: 0 0 10px rgba(193,91,4,.35);
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.btnCancelar a{
+    width: 220px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 6px;
+    background: #616366;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .25s;
+}
+
+.btnCancelar a:hover{
+    background: #909192;
+    transform: translateY(-2px);
+}
+.btnCadastro button{
+    width: 220px;
+    height: 48px;
+    border: none;
+    border-radius: 6px;
+    background: #C15B04;
+    color: #FFF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btnCadastro button:hover{
+    background: #d96b0b;
+    transform: translateY(-2px);
+}

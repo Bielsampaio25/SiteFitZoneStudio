@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/cadastrarFuncionarioAdmin.css">
+    <link rel="stylesheet" href="../css/cadastrarAlunoAdmin.css">
     <title>Cadastro Funcionario</title>
 </head>
 
@@ -29,8 +29,8 @@
             <div class="sidebar-content">
                 <ul>
                     <li><a href="../pages/dashboardAdmin.html">Dashboard</a></li>
-                    <li id="funcionarios"><a href="../pages/funcionariosAdmin.html">Funcionarios</a></li>
-                    <li><a href="../pages/alunosAdmin.html">Alunos</a></li>
+                    <li><a href="../pages/funcionariosAdmin.html">Funcionarios</a></li>
+                    <li id="alunos"><a href="../pages/alunosAdmin.html">Alunos</a></li>
                     <li><a href="../pages/financeiroAdmin.html">Financeiro</a></li>
                     <li><a href="../pages/agendaAdmin.html">Agenda</a></li>
                     <li><a href="../index.html">Sair</a></li>
@@ -38,7 +38,7 @@
             </div>
         </aside>
         <form action="/cadastarFuncionario" method="post" class="formulario">
-            <h1>Cadastrar Funcionario</h1>
+            <h1>Cadastrar Aluno</h1>
             <div class="formulario-content">
                 <div class="formulario-content-campos">
                     <div class="foto-perfil-container">
@@ -85,21 +85,8 @@
                         <input type="tel" name="telefone" id="telefone" placeholder="Digite o telefone">
                     </div>
                     <div class="campo">
-                        <label for="rg">RG</label>
-                        <input type="text" name="rg" id="rg" placeholder="Digite o RG">
-                    </div>
-                    <div class="campo">
-                        <label>Data De Admissão</label>
+                        <label>Data Da Matrícula</label>
                         <input type="date" name="rg" id="rg" placeholder="Digite o RG">
-                    </div>
-                    <div class="campo">
-                        <label>Turno De Trabalho</label>
-                        <select name="turno" id="turno">
-                            <option value="0">Selecione uma opção</option>
-                            <option value="1">Matutino</option>
-                            <option value="2">Vespertino</option>
-                            <option value="3">Noturno</option>
-                        </select>
                     </div>
                 </div>
                 <div class="formulario-content-campos">
@@ -110,10 +97,6 @@
                     <div class="campo">
                         <label for="password">Senha</label>
                         <input type="password" name="password" id="password" placeholder="Crie uma senha">
-                    </div>
-                    <div class="campo">
-                        <label for="password">Salario</label>
-                        <input type="text" name="salario" id="salario" placeholder="Digite o salario">
                     </div>
                     <div class="campo">
                         <label for="cep">CEP</label>
@@ -147,7 +130,7 @@
             </div>
             <div class="botoes">
                 <div class="btnCancelar">
-                    <a href="../pages/funcionariosAdmin.html">Cancelar</a>
+                    <a href="../pages/alunosAdmin.html">Cancelar</a>
                 </div>
                 <div class="btnCadastro">
                     <button type="button"

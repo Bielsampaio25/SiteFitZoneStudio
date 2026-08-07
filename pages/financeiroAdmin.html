@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dashboardAdmin.css">
+    <link rel="stylesheet" href="../css/financeiroAdmin.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -36,10 +36,10 @@
             <div class="sidebar-content">
 
                 <ul>
-                    <li id="dashboard">Dashboard</li>
+                    <li><a href="../pages/dashboardAdmin.html">Dashboard</a></li>
                     <li><a href="../pages/funcionariosAdmin.html">Funcionários</a></li>
                     <li><a href="../pages/alunosAdmin.html">Alunos</a></li>
-                    <li><a href="../pages/financeiroAdmin.html">Financeiro</a></li>
+                    <li id="financeiro">Financeiro</li>
                     <li><a href="../pages/agendaAdmin.html">Agenda</a></li>
                     <li><a href="../index.html">Sair</a></li>
                 </ul>
@@ -54,18 +54,20 @@
 
                 <div class="card-info">
                     <div class="card-info-nome">
-                        <img src="../assets/icons/icone_perfil_ativos.png" alt="">
-                        <h2>Alunos Ativos</h2>
+                        <img src="../assets/icons/icone_receita_mensal.png" alt="">
+                        <h2>Receita</h2>
                     </div>
-                    <h1 id="alunosAtivos">1196</h1>
+                    <h1 id="valorReceita">R$ 5.400,00</h1>
+                    <span id="receita">10,2%</span>
                 </div>
 
                 <div class="card-info">
                     <div class="card-info-nome">
-                        <img src="../assets/icons/icone_funcionario_ativos.png" alt="">
-                        <h2>Funcionários Ativos</h2>
+                        <img src="../assets/icons/icone_despesas.png" alt="">
+                        <h2>Despesas</h2>
                     </div>
-                    <h1 id="funcionariosAtivos">42</h1>
+                    <h1 id="valorDespesas">R$ 2.230,00</h1>
+                    <span id="despesas">4,3%</span>
                 </div>
 
                 <div class="card-info">
@@ -73,7 +75,8 @@
                         <img src="../assets/icons/icone_plano_vencido.png" alt="">
                         <h2>Planos Vencidos</h2>
                     </div>
-                    <h1 id="planosVencidos">52</h1>
+                    <h1 id="valorLucro">R$ 3.170,00</h1>
+                    <span id="lucro">15,8%</span>
                 </div>
 
             </section>
@@ -87,59 +90,22 @@
             </section>
 
             <section class="cards-info-container">
+                
+                <section class="graficoDespesas">
 
-                <div class="card-info">
-                    <div class="card-info-title">
-                    <h1>Aulas Do Dia</h1>
-                    <a>Ver Todas</a>
-                    </div>
-                    <div class="card-info-content">
-                        <p id="horarioAula">07:00</p>
-                        <p id="nomeAula">Funcional</p>
-                        <p id="instrutorAula">João Silva</p>
-                    </div>
-                </div>
+                <h2>Gráfico De Despesas</h2>
 
-                <div class="card-info-lucro">
+                <canvas id="graficoDespesas" ></canvas>
+
+            </section>
+                
+            <div class="card-info-lucro">
                     <div class="card-info-nome">
                         <img src="../assets/icons/icone_receita_anual.png" alt="">
                         <h2>Lucro Anual</h2>
                     </div>
                     <h1 id="lucroAnual">R$ 48.750,00</h1>
                 </div>
-
-                <div class="card-info-resumo">
-                <div class="card-info-card">
-                    <div class="card-info-card-content">
-                    <div class="card-info-nome">
-                        <img src="../assets/icons/icone_receita_mensal.png" alt="">
-                       <h2>Receita</h2>
-                    </div>
-                    <h1 id="valoReceita">R$ 5.400,00</h1>
-                    <span id="receita">10,2%</span>
-                    </div>
-                </div>
-                <div class="card-info-card">
-                    <div class="card-info-card-content">
-                    <div class="card-info-nome">
-                        <img src="../assets/icons/icone_despesas.png" alt="">
-                       <h2>Despesas</h2>
-                    </div>
-                    <h1 id="valoDespesas">R$ 2.230,00</h1>
-                    <span id="despesas">4,3%</span>
-                    </div>
-                </div>
-                <div class="card-info-card">
-                    <div class="card-info-card-content">
-                    <div class="card-info-nome">
-                        <img src="../assets/icons/icone_lucro.png" alt="">
-                       <h2>Lucros</h2>
-                    </div>
-                    <h1 id="valoLucro">R$ 3.170,00</h1>
-                    <span id="lucro">15,8%</span>
-                    </div>
-                </div>
-
             </section>
 
         </div>
@@ -164,6 +130,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/dashboardAdmin.js"></script>
+    <script src="../js/financeiroAdmin.js"></script>
 
 </body>
 
