@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/editarFuncionarioAdmin.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAdmin/editarFuncionarioAdmin.css">
     <title>Editar Funcionario</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <img src="../assets/images/imagem_logo.png" alt="" class="logo">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
             <div class="perfil">
-                <img src="../assets/images/Ellipse 1.png" alt="">
+                <img src="../../assets/images/Ellipse 1.png" alt="">
                 <div class="perfil-texto">
                     <h1>Carlos Santana</h1>
                     <h2>Administrador</h2>
@@ -28,17 +28,17 @@
         <aside class="sidebar">
             <div class="sidebar-content">
                 <ul>
-                    <li><a href="../pages/dashboardAdmin.html">Dashboard</a></li>
-                    <li id="funcionarios"><a href="../pages/funcionariosAdmin.html">Funcionarios</a></li>
-                    <li><a href="../pages/alunosAdmin.html">Alunos</a></li>
-                    <li>Financeiro</li>
-                    <li>Agenda</li>
-                    <li>Sair</li>
+                    <li><a href="../../pages/htmlAdmin/dashboardAdmin.html">Dashboard</a></li>
+                    <li id="funcionarios"><a href="../../pages/htmlAdmin/funcionariosAdmin.html">Funcionarios</a></li>
+                    <li><a href="../../pages/htmlAdmin/alunosAdmin.html">Alunos</a></li>
+                    <li><a href="../../pages/htmlAdmin/financeiroAdmin.html">Financeiro</a></li>
+                    <li><a href="../../pages/htmlAdmin/agendaAdmin.html">Agenda</a></li>
+                    <li><a href="../../index.html">Sair</a></li>
                 </ul>
             </div>
         </aside>
 
-        <form action="/cadastarFuncionario" method="post" class="formulario">
+        <form action="/editarFuncionario" method="post" class="formulario">
             <h1>Editar Funcionario</h1>
             <div class="topo-formulario">
                 <div class="campo-busca">
@@ -158,7 +158,7 @@
             </div>
             <div class="botoes">
                 <div class="btnCancelar">
-                    <a href="../pages/funcionariosAdmin.html">Cancelar</a>
+                    <a href="../../pages/htmlAdmin/funcionariosAdmin.html">Cancelar</a>
                 </div>
                 <div class="btnCadastro">
                     <button type="button">Editar</button>
@@ -167,13 +167,12 @@
         </form>
     </main>
 
-    <script src="../js/cadastro.js"></script>
-    <script src="../js/fotoPerfil.js"></script>
+    <script src="../../js/jsAdmin/fotoPerfil.js"></script>
 
     <footer>
         <hr>
         <div class="footer-content">
-            <img src="../assets/images/imagem_logo.png" alt="">
+            <img src="../../assets/images/imagem_logo.png" alt="">
             <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
             <a>Suporte</a>
         </div>

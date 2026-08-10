@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/editarAlunoAdmin.css">
-    <title>Editar Aluno</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAdmin/cadastrarAlunoAdmin.css">
+    <title>Cadastro Funcionario</title>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <img src="../assets/images/imagem_logo.png" alt="" class="logo">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
             <div class="perfil">
-                <img src="../assets/images/Ellipse 1.png" alt="">
+                <img src="../../assets/images/Ellipse 1.png" alt="">
                 <div class="perfil-texto">
                     <h1>Carlos Santana</h1>
                     <h2>Administrador</h2>
@@ -28,43 +28,33 @@
         <aside class="sidebar">
             <div class="sidebar-content">
                 <ul>
-                    <li><a href="../pages/dashboardAdmin.html">Dashboard</a></li>
-                    <li><a href="../pages/funcionariosAdmin.html">Funcionarios</a></li>
-                    <li id="alunos"><a href="../pages/alunosAdmin.html">Alunos</a></li>
-                    <li>Financeiro</li>
-                    <li>Agenda</li>
-                    <li>Sair</li>
+                    <li><a href="../../pages/htmlAdmin/dashboardAdmin.html">Dashboard</a></li>
+                    <li><a href="../../pages/htmlAdmin/funcionariosAdmin.html">Funcionarios</a></li>
+                    <li id="alunos"><a href="../../pages/htmlAdmin/alunosAdmin.html">Alunos</a></li>
+                    <li><a href="../../pages/htmlAdmin/financeiroAdmin.html">Financeiro</a></li>
+                    <li><a href="../../pages/htmlAdmin/agendaAdmin.html">Agenda</a></li>
+                    <li><a href="../../index.html">Sair</a></li>
                 </ul>
             </div>
         </aside>
-
-        <form action="/cadastarFuncionario" method="post" class="formulario">
-            <h1>Editar Aluno</h1>
-            <div class="topo-formulario">
-                <div class="campo-busca">
-                    <div class="campo">
-                        <label for="codigo">Buscar Aluno</label>
-                        <div class="input-com-botao">
-                            <input type="text" name="codigo" id="codigo" placeholder="Digite a matrícula do aluno">
-                            <button type="button" class="btnBuscar" id="btnBuscarFuncionario">Buscar</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="foto-secao">
+        <form action="/cadastarAluno" method="post" class="formulario">
+            <h1>Cadastrar Aluno</h1>
+            <div class="formulario-content">
+                <div class="formulario-content-campos">
                     <div class="foto-perfil-container">
                         <img id="preview" hidden>
                         <div class="foto-perfil-content" id="textoUpload">
-                            <h2>Foto de Perfil</h2>
+                            <label for="foto" class="upload-area">
+                                <img src="../../assets/icons/icone_camera.png" alt="">
+                                <h2>Clique para anexar uma foto</h2>
+                                <p>PNG, JPG ou JPEG</p>
+                            </label>
+                            <input type="file" id="foto" accept="image/*" hidden onclick="habilitarInput()">
                         </div>
                     </div>
-                    <div class="btnMudarFoto" id="btnMudarFoto">
+                    <div class="btnMudarFoto" id="btnMudarFoto" hidden>
                         <label for="foto">Mudar imagem</label>
-                        <input type="file" id="foto" accept="image/*" hidden>
                     </div>
-                </div>
-            </div>
-            <div class="formulario-content">
-                <div class="formulario-content-campos">
                     <div class="campo">
                         <label for="name">Nome Completo</label>
                         <input type="text" name="name" id="name" placeholder="Digite o nome completo">
@@ -140,23 +130,22 @@
             </div>
             <div class="botoes">
                 <div class="btnCancelar">
-                    <a href="../pages/alunosAdmin.html">Cancelar</a>
+                    <a href="../../pages/htmlAdmin/alunosAdmin.html">Cancelar</a>
                 </div>
                 <div class="btnCadastro">
-                    <button type="button">Editar</button>
+                    <button type="button"
+                        onclick="verificarInput(), verificarCpf(), verificarSelect()">Cadastrar</button>
                 </div>
+            </div>
             </div>
         </form>
     </main>
-
-    <script src="../js/cadastro.js"></script>
-    <script src="../js/fotoPerfil.js"></script>
-
+    <script src="../../js/jsAdmin/fotoPerfil.js"></script>
     <footer>
         <hr>
         <div class="footer-content">
-            <img src="../assets/images/imagem_logo.png" alt="">
-            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+            <img src="../../assets/images/imagem_logo.png" alt="">
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados. </p>
             <a>Suporte</a>
         </div>
     </footer>
