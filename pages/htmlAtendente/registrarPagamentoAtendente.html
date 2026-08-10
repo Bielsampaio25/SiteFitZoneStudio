@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAtendente/registrarPagamentoAtendente.css">
+    <title>Registrar Pagamento</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+            <div class="perfil">
+                <img src="../../assets/images/Ellipse 1.png" alt="">
+                <div class="perfil-texto">
+                    <h1>Carlos Santana</h1>
+                    <h2>Administrador</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="../../pages/htmlAtendente/dashboardAtendente.html">Dashboard</a></li>
+                    <li><a href="../../pages/htmlAtendente/alunosAtendente.html">Alunos</a></li>
+                    <li><a href="../../pages/htmlAtendente/agendaAtendente.html">Agenda</a></li>
+                    <li id="pagamento"><a href="../../pages/htmlAtendente/registrarPagamentoAtendente.html">Registrar
+                            Pagamento</a></li>
+                    <li><a href="../../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </aside>
+        <form action="/cadastarEvento" method="post" class="formulario">
+            <h1>Cadastrar Evento</h1>
+            <div class="formulario-content">
+                <div class="campo">
+                    <label for="nomePlano">Nome Do Plano</label>
+                    <input type="text" name="nomePlano" id="cpf" placeholder="Digite o plano">
+                </div>
+                <div class="campo">
+                    <label for="valorPlano">Valor Do Plano</label>
+                    <input type="number" id="valorPlano" name="valorPlano" step="0.01" min="0" placeholder="R$ 0,00">
+                </div>
+                <div class="campo">
+                    <label for="dataPagamento">Data Do Pagamento</label>
+                    <input type="date" name="dataPagamento" id="dataPagamento">
+                </div>
+                <div class="campo">
+                    <label for="matricula">Matricula Do Aluno</label>
+                    <input type="text" name="matricula" id="matricula" placeholder="Digite a matrícula do aluno">
+                </div>
+            </div>
+            <div class="botoes">
+                <div class="btnCancelar">
+                    <a href="../../pages/htmlAtendente/agendaAtendente.html">Cancelar</a>
+                </div>
+                <div class="btnCadastro">
+                    <button type="button">Cadastrar</button>
+                </div>
+            </div>
+            </div>
+        </form>
+    </main>
+    <script src="../../js/jsAdmin/fotoPerfil.js"></script>
+    <footer>
+        <hr>
+        <div class="footer-content">
+            <img src="../../assets/images/imagem_logo.png" alt="">
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados. </p>
+            <a>Suporte</a>
+        </div>
+    </footer>
+</body>
+
+</html>
