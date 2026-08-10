@@ -17,24 +17,33 @@ main{
     height:130px;
 }
 
-.perfil{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    margin-right:30px;
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 30px;
 }
 
-.perfil-texto h1{
+/* SOMENTE A FOTO DE PERFIL */
+.perfil > img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.perfil-texto h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
 
-.perfil-texto h2{
+.perfil-texto h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 200;
 }
 
-.perfil-texto-nome{
+.perfil-texto-nome {
     display: flex;
     gap: 5px;
 }
