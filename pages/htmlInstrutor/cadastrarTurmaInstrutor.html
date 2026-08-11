@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssInstrutor/cadastrarAlunoInstrutor.css">
+    <title>Cadastro Turma</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+
+            <div class="perfil">
+                <img src="../../assets/images/imagem_funcionario_dois.png">
+
+                <div class="perfil-texto">
+                    <div class="card-info-nome">
+                        <h1>Mariana Souza</h1>
+                        <img src="../../assets/icons/icone-seta-baixo.png" alt="">
+                    </div>
+                    <h2>Instrutor</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="../../pages/htmlInstrutor/dashboardInstrutor.html">Dashboard</a></li>
+                    <li id="turmas">
+                        <a href="../../pages/htmlInstrutor/turmasInstrutor.html">Turmas</a>
+                    </li>
+                    <li>
+                        <a href="../../pages/htmlInstrutor/registrarTreinoInstrutor.html">Treinos</a>
+                    </li>
+                    <li>
+                        <a href="../../pages/htmlInstrutor/agendaInstrutor.html">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="../../index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <form action="/cadastarTurma" method="post" class="formulario">
+
+            <h1>Cadastrar Turma</h1>
+
+            <div class="formulario-content">
+
+                <div class="campo">
+                    <label for="nomeTurma">Nome Da Turma</label>
+                    <input type="text" name="nomeTurma" id="nomeTurma" placeholder="Digite o nome da turma">
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">Especialidade</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF">
+                </div>
+                <div class="campo">
+                    <label for="cpf">Data De Início</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF">
+                </div>
+                <div class="campo">
+                    <label for="cpf">Instrutor</label>
+                    <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF">
+                </div>
+                <div class="campo">
+                    <label for="turno">Turno</label>
+                    <select name="turno" id="turno">
+                        <option value="">Selecione uma opção</option>
+                        <option value="matutino">Matutino</option>
+                        <option value="vespertino">Vespertino</option>
+                        <option value="noturno">Noturno</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <div class="btnCancelar">
+                    <a href="../../pages/htmlAtendente/alunosAtendente.html">Cancelar</a>
+                </div>
+
+                <div class="btnCadastro">
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <hr>
+
+        <div class="footer-content">
+            <img src="../../assets/images/imagem_logo.png" alt="">
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+            <a>Suporte</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

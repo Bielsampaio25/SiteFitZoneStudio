@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/cssInstrutor/dashboardInstrutor.css">
+    <link rel="stylesheet" href="../../css/cssInstrutor/agendaInstrutor.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -36,10 +36,10 @@
             <div class="sidebar-content">
 
                 <ul>
-                    <li id="dashboard">Dashboard</li>
+                    <li><a href="../../pages/htmlInstrutor/dashboardInstrutor.html"></a>Dashboard</li>
                     <li><a href="../../pages/htmlInstrutor/turmasInstrutor.html">Turmas</a></li>
                     <li><a href="../../pages/htmlInstrutor/registrarTreinoInstrutor.html">Treinos</a></li>
-                    <li><a href="../../pages/htmlInstrutor/agendaInstrutor.html">Agenda</a></li>
+                    <li id="agenda"><a href="../../pages/htmlInstrutor/agendaInstrutor.html">Agenda</a></li>
                     <li><a href="../../index.html">Sair</a></li>
                 </ul>
 
@@ -48,27 +48,6 @@
         </aside>
 
         <div class="dashboard-content">
-
-            <section class="cards-info-container">
-
-                <div class="card-info">
-                    <div class="card-info-nome">
-                        <img src="../../assets/icons/icone_perfil_ativos.png" alt="">
-                        <h2>Aulas Hoje</h2>
-                    </div>
-                    <h1 id="aulasDiaInstrutor">4</h1>
-                </div>
-
-                <div class="card-info">
-                    <div class="card-info-nome">
-                        <img src="../../assets/icons/icone_total_alunos.png" alt="">
-                        <h2>Alunos Nas Suas Turmas</h2>
-                    </div>
-                    <h1 id="alunosTurma">41</h1>
-                </div>
-
-            </section>
-
             <section class="lista-agenda">
                 <div class="menu-tabela">
                     <h1>Agenda</h1>
@@ -258,80 +237,16 @@
                     </tbody>
                 </table>
             </section>
-
-            <section class="lista-turmas">
-                <div class="menu-tabela">
-
-                    <h1>Lista De Turmas</h1>
-
-                    <input type="text" placeholder="Nome Da Turma">
-
-                    <button>
-                        Buscar Turma
-                    </button>
-
-                    <a href="../../pages/htmlAtendente/editarAlunoAtendente.html">
-                        Editar Turma
-                    </a>
-
-                    <a class="btn-cadastrar" href="../../pages/htmlAtendente/cadastrarAlunoAtendente.html">Cadastrar
-                        Nova Turma</a>
-
-                </div>
-                <table>
-                    <thead>
-                        <th>Turma</th>
-                        <th>Modalidade</th>
-                        <th>Dias</th>
-                        <th>Horário</th>
-                        <th>Quantidade De Alunos</th>
-                    </thead>
-                    <tbody id="corpoTabela">
-                        <tr>
-                            <td>Spinning</td>
-                            <td>Spinning</td>
-                            <td>Segegunda, Quarta, Sexta</td>
-                            <td>07:00 - 08:00</td>
-                            <td>18 Alunos</td>
-                        </tr>
-                        <tr>
-                            <td>Fit Dance</td>
-                            <td>Aula De Dança</td>
-                            <td>Terça e Quinta</td>
-                            <td>09:00 - 10:00</td>
-                            <td>15 Alunos</td>
-                        </tr>
-                        <tr>
-                            <td>Musculação Funcional</td>
-                            <td>Aula De Musculação Guiada</td>
-                            <td>Segegunda e Quarta</td>
-                            <td>17:30 - 18:30</td>
-                            <td>8 Alunos</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
         </div>
-
     </main>
-
     <footer>
-
         <hr>
-
         <div class="footer-content">
-
-            <img src="../../assets/images/imagem_logo.png">
-
-            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
-
-            <a href="#">Suporte</a>
-
+            <img src="../../assets/images/imagem_logo.png" alt="">
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados. </p>
+            <a>Suporte</a>
         </div>
-
     </footer>
-
 </body>
 
 </html>

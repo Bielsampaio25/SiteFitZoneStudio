@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssInstrutor/registrarTreinoInstrutor.css">
+    <title>Registrar Treino</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+
+            <div class="perfil">
+                <img src="../../assets/images/imagem_funcionario_dois.png">
+
+                <div class="perfil-texto">
+                    <div class="card-info-nome">
+                        <h1>Mariana Souza</h1>
+                        <img src="../../assets/icons/icone-seta-baixo.png" alt="">
+                    </div>
+                    <h2>Instrutor</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="../../pages/htmlInstrutor/dashboardInstrutor.html">Dashboard</a></li>
+                    <li>
+                        <a href="../../pages/htmlInstrutor/turmasInstrutor.html">Turmas</a>
+                    </li>
+                    <li id="treino">
+                        <a href="../../pages/htmlInstrutor/registrarTreinoInstrutor.html">Treinos</a>
+                    </li>
+                    <li>
+                        <a href="../../pages/htmlInstrutor/agendaInstrutor.html">Agenda</a>
+                    </li>
+                    <li>
+                        <a href="../../index.html">Sair</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <form action="/registrarTreino" method="post" class="formulario">
+
+            <h1>Registrar Treino</h1>
+
+            <div class="formulario-content">
+
+                <div class="campo">
+                    <label for="matricula">Matricula Do Aluno</label>
+                    <input type="text" name="matricula" id="matricula" placeholder="Digite a matrícula do aluno">
+                </div>
+
+                <div class="campo">
+                    <label for="cpf">Nome do Treino</label>
+                    <input type="text" name="nomeTreino" id="nomeTreino" placeholder="Digite o nome do treino">
+                </div>
+                <div class="campo">
+                    <label for="grupoMuscular">Grupo Muscular</label>
+                    <select name="grupoMuscular" id="grupoMuscular">
+                        <option value="" disabled selected>Selecione o grupo muscular</option>
+                        <optgroup label="Membros inferiores">
+                            <option value="quadriceps">Quadríceps</option>
+                            <option value="posteriores-coxa">Posteriores de coxa (isquiotibiais)</option>
+                            <option value="gluteos">Glúteos</option>
+                            <option value="panturrilhas">Panturrilhas</option>
+                            <option value="adutores">Adutores</option>
+                            <option value="abdutores">Abdutores</option>
+                        </optgroup>
+                        <optgroup label="Peito">
+                            <option value="peitoral-maior">Peitoral maior</option>
+                            <option value="peitoral-menor">Peitoral menor</option>
+                        </optgroup>
+                        <optgroup label="Costas">
+                            <option value="latissimo-dorso">Latíssimo do dorso (dorsal)</option>
+                            <option value="trapezio">Trapézio</option>
+                            <option value="romboides">Romboides</option>
+                            <option value="redondo-maior">Redondo maior</option>
+                            <option value="redondo-menor">Redondo menor</option>
+                            <option value="eretor-espinha">Eretor da espinha (lombar)</option>
+                        </optgroup>
+                        <optgroup label="Ombros">
+                            <option value="deltoide-anterior">Deltoide anterior</option>
+                            <option value="deltoide-lateral">Deltoide lateral</option>
+                            <option value="deltoide-posterior">Deltoide posterior</option>
+                        </optgroup>
+                        <optgroup label="Braços">
+                            <option value="biceps">Bíceps</option>
+                            <option value="triceps">Tríceps</option>
+                            <option value="braquiorradial">Braquiorradial</option>
+                            <option value="flexores-antebraco">Flexores do antebraço</option>
+                            <option value="extensores-antebraco">Extensores do antebraço</option>
+                        </optgroup>
+                        <optgroup label="Abdômen e Core">
+                            <option value="reto-abdominal">Reto abdominal</option>
+                            <option value="obliquos">Oblíquos</option>
+                            <option value="transverso-abdomen">Transverso do abdômen</option>
+                            <option value="quadrado-lombar">Quadrado lombar</option>
+                        </optgroup>
+                        <optgroup label="Outros">
+                            <option value="serrati-anterior">Serrátil anterior</option>
+                            <option value="esternocleidomastoideo">Esternocleidomastoideo (pescoço)</option>
+                            <option value="manguito-rotador">Manguito rotador</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="series">Series</label>
+                    <input type="number" name="series" id="series" placeholder="Digite a quantidade de series">
+                </div>
+
+                <div class="campo">
+                    <label for="repeticoes">Repetições</label>
+                    <input type="number" name="repeticoes" id="repeticoes"
+                        placeholder="Digite a quantidade de repetições">
+                </div>
+
+                <div class="campo">
+                    <label for="exercicios">Exercicios</label>
+                        <div class="lista-exercicios">
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="supino-reto">
+                                <span>Supino reto</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="supino-inclinado">
+                                <span>Supino inclinado</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="crucifixo">
+                                <span>Crucifixo</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="puxada-frontal">
+                                <span>Puxada frontal</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="remada-baixa">
+                                <span>Remada baixa</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="rosca-direta">
+                                <span>Rosca direta</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="triceps-polia">
+                                <span>Tríceps na polia</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="agachamento-livre">
+                                <span>Agachamento livre</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="leg-press">
+                                <span>Leg press</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="cadeira-extensora">
+                                <span>Cadeira extensora</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="mesa-flexora">
+                                <span>Mesa flexora</span>
+                            </label>
+
+                            <label class="exercicio">
+                                <input type="checkbox" name="exercicios" value="elevacao-lateral">
+                                <span>Elevação lateral</span>
+                            </label>
+
+                        </div>
+                    </div>
+                    ```
+
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <div class="btnCancelar">
+                    <a href="../../pages/htmlAtendente/alunosAtendente.html">Cancelar</a>
+                </div>
+
+                <div class="btnCadastro">
+                    <button type="submit">Cadastrar</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <hr>
+
+        <div class="footer-content">
+            <img src="../../assets/images/imagem_logo.png" alt="">
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+            <a>Suporte</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
