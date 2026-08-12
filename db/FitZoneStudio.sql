@@ -15,24 +15,7 @@ CREATE TABLE Administradores(
              bairro VARCHAR(50),
              complemento VARCHAR(50));
              
-CREATE TABLE Atendentes(
-			 codigo INT(8) PRIMARY KEY,
-             nome VARCHAR(50),
-             cpf VARCHAR(50),
-             rg VARCHAR(50),
-             dta_nascimento DATE,
-             telefone VARCHAR(50),
-             email VARCHAR(50),
-             sexo VARCHAR(20),
-             salario DECIMAL(10,2),
-             situacao VARCHAR(20),
-             estado VARCHAR(50),
-             cidade VARCHAR(50),
-             cep VARCHAR(50),
-             bairro VARCHAR(50),
-             complemento VARCHAR(50));
-             
-CREATE TABLE Instrutores(
+CREATE TABLE Funcionarios(
 			 codigo INT(8) PRIMARY KEY,
              nome VARCHAR(50),
              cpf VARCHAR(50),
