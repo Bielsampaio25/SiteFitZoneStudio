@@ -32,6 +32,8 @@ CREATE TABLE Funcionarios(
              cidade VARCHAR(50),
              cep VARCHAR(50),
              bairro VARCHAR(50),
+             endereco VARCHAR(100),
+             numero VARCHAR(20),
              complemento VARCHAR(50),
              nome_usuario VARCHAR(50),
              senha VARCHAR(50));
