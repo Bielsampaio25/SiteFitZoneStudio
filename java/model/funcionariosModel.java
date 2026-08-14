@@ -9,12 +9,17 @@ public class funcionariosModel {
     private String email;
     private String sexo;
     private String salario;
-    private String situacao;
+    private String dtaAdmissao;
+    private String turno;
     private String estado;
     private String cidade;
     private String cep;
     private String bairro;
+    private String endereco;
+    private String numero;
     private String complemento;
+    private String nomeUsuario;
+    private String senha;
 
     public String getNome(){
         return nome;
@@ -72,12 +77,19 @@ public class funcionariosModel {
     public void setSalario(String salario){
         this.salario = salario;
     }
-    public String getSituacao(){
-        return situacao;
+    public String getdtaAdmissao(){
+        return dtaAdmissao;
     }
 
-    public void setSituacao(String situacao){
-        this.situacao = situacao;
+    public void setdtaAdmissao(String dtaAdmissao){
+        this.dtaAdmissao = dtaAdmissao;
+    }
+    public String getTurno(){
+        return turno;
+    }
+
+    public void setTurno(String turno){
+        this.turno = turno;
     }
     public String getEstado(){
         return estado;
@@ -107,11 +119,39 @@ public class funcionariosModel {
     public void setBairro(String bairro){
         this.bairro = bairro;
     }
+    public String getEndereco(){
+        return endereco;
+    }
+
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+    public String getNumero(){
+        return numero;
+    }
+
+    public void setNumero(String numero){
+        this.numero = numero;
+    }
     public String getComplemento(){
         return complemento;
     }
 
     public void setComplemento(String complemento){
         this.complemento = complemento;
+    }
+    public String getnomeUsuario(){
+        return nomeUsuario;
+    }
+
+    public void setnomeUsuario(String nomeUsuario){
+        this.nomeUsuario = nomeUsuario;
+    }
+    public String getSenha(){
+        return senha;
+    }
+
+    public void setSenha(String senha){
+        this.senha = senha;
     }
 }

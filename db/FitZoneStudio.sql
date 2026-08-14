@@ -2,7 +2,7 @@ CREATE DATABASE FitZoneStudio;
 USE FitZoneStudio;
 
 CREATE TABLE Administradores(
-			 codigo INT(8) PRIMARY KEY,
+			 codigo INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              cpf VARCHAR(50),
              dta_nascimento DATE,
@@ -16,7 +16,7 @@ CREATE TABLE Administradores(
              complemento VARCHAR(50));
              
 CREATE TABLE Funcionarios(
-			 codigo INT(8) PRIMARY KEY,
+			 codigo INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              cpf VARCHAR(50),
              rg VARCHAR(50),
@@ -26,14 +26,18 @@ CREATE TABLE Funcionarios(
              sexo VARCHAR(20),
              salario DECIMAL(10,2),
              situacao VARCHAR(20),
+             dta_admissao DATE,
+             turno VARCHAR(20),
              estado VARCHAR(50),
              cidade VARCHAR(50),
              cep VARCHAR(50),
              bairro VARCHAR(50),
-             complemento VARCHAR(50));
+             complemento VARCHAR(50),
+             nome_usuario VARCHAR(50),
+             senha VARCHAR(50));
              
 CREATE TABLE Alunos(
-			 matricula INT(8) PRIMARY KEY,
+			 matricula INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              cpf VARCHAR(50),
              dta_nascimento DATE,
@@ -49,23 +53,23 @@ CREATE TABLE Alunos(
              complemento VARCHAR(50));
 
 CREATE TABLE Planos(
-			 id INT PRIMARY KEY AUTO_INCREMENT,
+			 id_plano INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              duracao VARCHAR(50),
              valor DECIMAL(10,2));
              
 CREATE TABLE Mensalidades(
-             id INT PRIMARY KEY AUTO_INCREMENT,
+             id_mensalidade INT PRIMARY KEY AUTO_INCREMENT,
              dta_pagamento DATE,
              dta_vencimento DATE,
              situacao CHAR(20),
              matricula INT(8),
-             id INT,
+             id_plano INT,
              FOREIGN KEY (matricula) REFERENCES Alunos (matricula),
-             FOREIGN KEY (id) REFERENCES Planos (id));
+             FOREIGN KEY (id_plano) REFERENCES Planos (id_plano));
              
 CREATE TABLE Treinos(
-			id INT PRIMARY KEY AUTO_INCREMENT,
+			id_treino INT PRIMARY KEY AUTO_INCREMENT,
             nome VARCHAR(50),
             exercicios VARCHAR(100),
             grupo_muscular VARCHAR(100),
@@ -75,22 +79,22 @@ CREATE TABLE Treinos(
             FOREIGN KEY (matricula) REFERENCES Alunos (matricula));
             
 CREATE TABLE Aulas(
-             id INT PRIMARY KEY AUTO_INCREMENT,
+             id_aula INT PRIMARY KEY AUTO_INCREMENT,
              modalidade VARCHAR(50),
              horario TIME,
              dia ENUM('SEG','TER','QUA','QUI','SEX','SAB'),
              codigo INT(8),
-             FOREIGN KEY (codigo) REFERENCES Instrutores (codigo));
+             FOREIGN KEY (codigo) REFERENCES Funcionarios (codigo));
 
 CREATE TABLE Turmas(
-			 id INT PRIMARY KEY AUTO_INCREMENT,
+			 id_turma INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              dta_inicio DATE,
-             id INT,
-             FOREIGN KEY (id) REFERENCES Aulas (id));
+             id_aula INT,
+             FOREIGN KEY (id_aula) REFERENCES Aulas (id_aula));
              
 CREATE TABLE Despesas(
-		     id INT PRIMARY KEY AUTO_INCREMENT,
+		     id_despesa INT PRIMARY KEY AUTO_INCREMENT,
              descricao VARCHAR(50),
              dta_pagamento DATE,
              valor DECIMAL(10,2));
