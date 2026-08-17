@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAtendente/dashboardAtendente.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+            <div class="perfil">
+                <img src="../../assets/images/imagem_funcionario_um.png">
+
+                <div class="perfil-texto">
+                    <div class="card-info-nome">
+                    <h1>Juliana Costa</h1>
+                    <img src="../../assets/icons/icone-seta-baixo.png" alt="">
+                    </div>
+                    <h2>Atendente</h2>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <aside class="sidebar">
+
+            <div class="sidebar-content">
+
+                <ul>
+                    <li id="dashboard">Dashboard</li>
+                    <li><a href="../../pages/htmlAtendente/alunosAtendente.html">Alunos</a></li>
+                    <li><a href="../../pages/htmlAtendente/agendaAtendente.html">Agenda</a></li>
+                    <li><a href="../../pages/htmlAtendente/registrarPagamentoAtendente.html">Registrar Pagamento</a></li>
+                    <li><a href="../../../index.html">Sair</a></li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <div class="dashboard-content">
+
+            <section class="cards-info-container">
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_total_alunos.png" alt="">
+                        <h2>Total De Alunos</h2>
+                    </div>
+                    <h1 id="alunosAtivos">1196</h1>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_funcionario_ativos.png" alt="">
+                        <h2>Planos Ativos</h2>
+                    </div>
+                    <h1 id="funcionariosAtivos">42</h1>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_plano_vencido.png" alt="">
+                        <h2>Planos Vencidos</h2>
+                    </div>
+                    <h1 id="planosVencidos">52</h1>
+                </div>
+
+            </section>
+
+            <section class="graficoNovosAlunos">
+
+                <h2>Novos Alunos</h2>
+
+                <canvas id="graficoNovosAlunos"></canvas>
+
+            </section>
+
+            <section class="cards-info-container">
+
+                <div class="card-info">
+                    <div class="card-info-title">
+                    <h1>Aulas Do Dia</h1>
+                    <a href="../../pages/htmlAtendente/agendaAtendente.html">Ver Todas</a>
+                    </div>
+                    <div class="card-info-content">
+                        <p id="horarioAula">07:00</p>
+                        <p id="nomeAula">Funcional</p>
+                        <p id="instrutorAula">João Silva</p>
+                    </div>
+                </div>
+
+                <div class="card-info-lucro">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_aulas.png" alt="">
+                        <h2>Aulas Do Dia</h2>
+                    </div>
+                    <h1 id="aulasDia">4</h1>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <div class="footer-content">
+
+            <img src="../../assets/images/imagem_logo.png">
+
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+
+            <a href="#">Suporte</a>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/jsAtendente/dashboardAtendente.js"></script>
+
+</body>
+
+</html>

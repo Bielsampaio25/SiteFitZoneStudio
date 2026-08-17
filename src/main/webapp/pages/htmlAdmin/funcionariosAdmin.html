@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAdmin/funcionariosAdmin.css">
+    <title>Funcionarios</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+            <div class="perfil">
+                <img src="../../assets/images/Ellipse 1.png" alt="">
+                <div class="perfil-texto">
+                    <h1>Carlos Santana</h1>
+                    <h2>Administrador</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="../../pages/htmlAdmin/dashboardAdmin.html">Dashboard</a></li>
+                    <li id="funcionarios">Funcionarios</li>
+                    <li> <a href="../../pages/htmlAdmin/alunosAdmin.html">Alunos</a></li>
+                    <li><a href="../../pages/htmlAdmin/financeiroAdmin.html">Financeiro</a></li>
+                    <li><a href="../../pages/htmlAdmin/agendaAdmin.html">Agenda</a></li>
+                    <li><a href="../../pages/htmlAdmin/cadastrarDespesaAdmin.html">Despesa</a></li>
+                    <li><a href="../../../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="dashboard-content">
+
+            <section class="cards-info-container">
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_total_funcionarios.png" alt="">
+                        <h2>Total De Funcionários</h2>
+                    </div>
+                    <h1 id="alunosAtivos">748</h1>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_funcionario_ativos.png" alt="">
+                        <h2>Funcionários Ativos</h2>
+                    </div>
+                    <h1 id="funcionariosAtivos">744</h1>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_funcionarios_afastados.png" alt="">
+                        <h2>Funcionários Afastados</h2>
+                    </div>
+                    <h1 id="planosVencidos">4</h1>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_funcionarios_desligados.png" alt="">
+                        <h2>Funcionários Desligados</h2>
+                    </div>
+                    <h1 id="funcionariosDesligados">2</h1>
+                </div>
+
+            </section>
+
+
+            <section class="lista-funcionarios">
+
+                <div class="menu-tabela">
+
+    <h1>Lista De Funcionários</h1>
+
+    <input 
+        type="text" 
+        placeholder="Nome Do Funcionário"
+    >
+
+    <select>
+        <option>Filtros</option>
+        <option value="ativos">Ativos</option>
+        <option value="afastados">Afastados</option>
+        <option value="desligados">Desligados</option>
+    </select>
+
+    <button>
+        Buscar Funcionário
+    </button>
+
+    <a href="../../pages/htmlAdmin/editarFuncionarioAdmin.html">
+        Editar Funcionário
+    </a>
+
+    <a 
+        class="btn-cadastrar" 
+        href="../../pages/htmlAdmin/cadastrarFuncionarioAdmin.html"
+    >
+        Cadastrar Novo Funcionário
+    </a>
+
+</div>
+
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Código</th>
+                            <th>Cargo</th>
+                            <th>Telefone</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Data De Admissão</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="corpoTabela">
+
+                        <tr>
+
+                            <td>
+                                <div class="nome-container">
+                                    <img src="../../assets/images/imagem_funcionario_um.png" alt="">
+                                    Juliana Costa Silva
+                                </div>
+                            </td>
+
+                            <td>01157649</td>
+
+                            <td>Recepcionista</td>
+
+                            <td>(71)99999-1111</td>
+
+                            <td>julianacosta@fitzone.com</td>
+
+                            <td>
+                                <span class="status-ativo">
+                                    Ativo
+                                </span>
+                            </td>
+
+                            <td>10/01/2023</td>
+
+                            <td>
+                                <div class="tabela-acoes">
+                                    <img src="../../assets/icons/icone_remover.png" alt="Remover funcionário">
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="nome-container">
+                                    <img src="../../assets/images/imagem_funcionario_dois.png" alt="">
+                                    Mariana Souza Ribeiro
+                                </div>
+                            </td>
+
+                            <td>01157649</td>
+
+                            <td>Instrutora</td>
+
+                            <td>(71)99999-3333</td>
+
+                            <td>marianasouza@fitzone.com</td>
+
+                            <td>
+                                <span class="status-afastado">
+                                    Afastado
+                                </span>
+                            </td>
+
+                            <td>20/03/2023</td>
+
+                            <td>
+                                <div class="tabela-acoes">
+                                    <img src="../../assets/icons/icone_remover.png" alt="Remover funcionário">
+                                </div>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <div class="nome-container">
+                                    <img src="../../assets/images/imagem_funcionario_tres.png" alt="">
+                                    Lucas Oliveira Cruz
+                                </div>
+                            </td>
+
+                            <td>56992307</td>
+
+                            <td>Instrutor</td>
+
+                            <td>(71)99999-2222</td>
+
+                            <td>lucasoliveira@fitzone.com</td>
+
+                            <td>
+                                <span class="status-desligado">
+                                    Desligado
+                                </span>
+                            </td>
+
+                            <td>15/02/2023</td>
+
+                            <td>
+                                <div class="tabela-acoes">
+                                    <img src="../../assets/icons/icone_remover.png" alt="Remover funcionário">
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </div>
+
+
+    </main>
+
+
+    <footer>
+
+        <hr>
+
+        <div class="footer-content">
+
+            <img src="../../assets/images/imagem_logo.png" alt="FitZone Studio">
+
+            <p>
+                &copy;2026 FitZone Studio. Todos os direitos reservados.
+            </p>
+
+            <a href="#">
+                Suporte
+            </a>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAdmin/cadastrarDespesaAdmin.css">
+
+    <title>Cadastrar Despesa</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <img
+                src="../../assets/images/imagem_logo.png"
+                alt="Logo FitZone Studio"
+                class="logo"
+            >
+
+            <div class="perfil">
+
+                <img
+                    src="../../assets/images/Ellipse 1.png"
+                    alt="Foto do administrador"
+                >
+
+                <div class="perfil-texto">
+
+                    <h1>Carlos Santana</h1>
+                    <h2>Administrador</h2>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <aside class="sidebar">
+
+            <div class="sidebar-content">
+
+                <ul>
+
+                    <li>
+                        <a href="../../pages/htmlAdmin/dashboardAdmin.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../pages/htmlAdmin/funcionariosAdmin.html">
+                            Funcionários
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../pages/htmlAdmin/alunosAdmin.html">
+                            Alunos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../pages/htmlAdmin/financeiroAdmin.html">
+                            Financeiro
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../pages/htmlAdmin/agendaAdmin.html">
+                            Agenda
+                        </a>
+                    </li>
+                    
+                    <li id="despesa">
+                        <a href="../../pages/htmlAdmin/cadastrarDespesaAdmin.html">
+                            Despesa
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../../../index.html">
+                            Sair
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <form
+            action="/cadastrarDespesa"
+            method="post"
+            class="formulario"
+        >
+
+            <h1>Cadastrar Despesa</h1>
+
+
+            <div class="formulario-content">
+
+                <div class="formulario-content-campos">
+
+                    <div class="campo">
+
+                        <label for="descricao">
+                            Descrição da Despesa
+                        </label>
+
+                        <input
+                            type="text"
+                            name="descricao"
+                            id="descricao"
+                            maxlength="50"
+                            placeholder="Digite a descrição da despesa"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="dtaPagamento">
+                            Data de Pagamento
+                        </label>
+
+                        <input
+                            type="date"
+                            name="dta_pagamento"
+                            id="dtaPagamento"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="valor">
+                            Valor da Despesa
+                        </label>
+
+                        <input
+                            type="number"
+                            name="valor"
+                            id="valor"
+                            min="0"
+                            step="0.01"
+                            placeholder="R$ 0,00"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="botoes">
+
+                <div class="btnCancelar">
+
+                    <a href="../../pages/htmlAdmin/financeiroAdmin.html">
+                        Cancelar
+                    </a>
+
+                </div>
+
+
+                <div class="btnCadastro">
+
+                    <button type="submit">
+                        Cadastrar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <hr>
+
+        <div class="footer-content">
+
+            <img src="../../assets/images/imagem_logo.png">
+
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+
+            <a href="#">Suporte</a>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

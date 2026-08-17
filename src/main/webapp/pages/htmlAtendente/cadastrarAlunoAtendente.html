@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssAtendente/cadastrarAlunoAtendente.css">
+    <title>Cadastro Aluno</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+            <div class="perfil">
+                <img src="../../assets/images/imagem_funcionario_um.png" alt="">
+                <div class="perfil-texto">
+                    <h1>Juliana Costa</h1>
+                    <h2>Atendente</h2>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <ul>
+                    <li><a href="../../pages/htmlAtendente/dashboardAtendente.html">Dashboard</a></li>
+                    <li id="alunos"><a href="../../pages/htmlAtendente/alunosAtendente.html">Alunos</a></li>
+                    <li><a href="../../pages/htmlAtendente/agendaAtendente.html">Agenda</a></li>
+                    <li><a href="../../pages/htmlAtendente/registrarPagamentoAtendente.html">Registrar Pagamento</a></li>
+                    <li><a href="../../../index.html">Sair</a></li>
+                </ul>
+            </div>
+        </aside>
+        <form action="/cadastarAluno" method="post" class="formulario">
+            <h1>Cadastrar Aluno</h1>
+            <div class="formulario-content">
+                <div class="formulario-content-campos">
+                    <div class="foto-perfil-container">
+                        <img id="preview" hidden>
+                        <div class="foto-perfil-content" id="textoUpload">
+                            <label for="foto" class="upload-area">
+                                <img src="../../assets/icons/icone_camera.png" alt="">
+                                <h2>Clique para anexar uma foto</h2>
+                                <p>PNG, JPG ou JPEG</p>
+                            </label>
+                            <input type="file" id="foto" accept="image/*" hidden onclick="habilitarInput()">
+                        </div>
+                    </div>
+                    <div class="btnMudarFoto" id="btnMudarFoto" hidden>
+                        <label for="foto">Mudar imagem</label>
+                    </div>
+                    <div class="campo">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" name="name" id="name" placeholder="Digite o nome completo">
+                    </div>
+                    <div class="campo">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="Digite o cpf">
+                    </div>
+                    <div class="campo">
+                        <label for="dtaNascimento">Data de Nascimento</label>
+                        <input type="date" name="dtaNascimento" id="dtaNascimento">
+                    </div>
+                    <div class="campo">
+                        <label for="sexo">Sexo</label>
+                        <select name="sexo" id="sexo">
+                            <option value="0">Selecione uma opção</option>
+                            <option value="1">Masculino</option>
+                            <option value="2">Feminino</option>
+                            <option value="3">Não-Binário</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Digite o email">
+                    </div>
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="Digite o telefone">
+                    </div>
+                    <div class="campo">
+                        <label>Data Da Matrícula</label>
+                        <input type="date" name="rg" id="rg" placeholder="Digite o RG">
+                    </div>
+                </div>
+                <div class="formulario-content-campos">
+                    <div class="campo">
+                        <label for="users">Nome de Usuário</label>
+                        <input type="text" name="users" id="users" placeholder="Crie um nome de usuário">
+                    </div>
+                    <div class="campo">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Crie uma senha">
+                    </div>
+                    <div class="campo">
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" id="cep" placeholder="Informe seu cep">
+                    </div>
+                    <div class="campo">
+                        <label for="estado">Estado</label>
+                        <input type="text" name="estado" id="estado" placeholder="Informe seu estado">
+                    </div>
+                    <div class="campo">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" name="cidade" id="cidade" placeholder="Informe sua cidade">
+                    </div>
+                    <div class="campo">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" id="bairro" placeholder="Informe seu bairro">
+                    </div>
+                    <div class="campo">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco" id="endereco" placeholder="Informe seu endereço">
+                    </div>
+                    <div class="campo">
+                        <label for="numero">Número</label>
+                        <input type="text" name="numero" id="numero" placeholder="Informe seu número">
+                    </div>
+                    <div class="campo">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" name="complemento" id="complemento" placeholder="Informe o complemento">
+                    </div>
+                </div>
+            </div>
+            <div class="botoes">
+                <div class="btnCancelar">
+                    <a href="../../pages/htmlAtendente/alunosAtendente.html">Cancelar</a>
+                </div>
+                <div class="btnCadastro">
+                    <button type="button"
+                        onclick="verificarInput(), verificarCpf(), verificarSelect()">Cadastrar</button>
+                </div>
+            </div>
+            </div>
+        </form>
+    </main>
+    <script src="../../js/jsAdmin/fotoPerfil.js"></script>
+    <footer>
+        <hr>
+        <div class="footer-content">
+            <img src="../../assets/images/imagem_logo.png" alt="">
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados. </p>
+            <a>Suporte</a>
+        </div>
+    </footer>
+</body>
+
+</html>

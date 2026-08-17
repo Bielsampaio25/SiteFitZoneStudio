@@ -1,0 +1,10 @@
+# Banco de dados
+*.sql
+db/
+
+# Maven
+target/
+
+# NetBeans
+nbactions.xml
+nb-configuration.xml

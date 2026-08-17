@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/cssInstrutor/dashboardInstrutor.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+            <div class="perfil">
+                <img src="../../assets/images/imagem_funcionario_dois.png">
+
+                <div class="perfil-texto">
+                    <div class="card-info-nome">
+                    <h1>Mariana Souza</h1>
+                    <img src="../../assets/icons/icone-seta-baixo.png" alt="">
+                    </div>
+                    <h2>Instrutor</h2>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <aside class="sidebar">
+
+            <div class="sidebar-content">
+
+                <ul>
+                    <li id="dashboard">Dashboard</li>
+                    <li><a href="../../pages/htmlInstrutor/turmasInstrutor.html">Turmas</a></li>
+                    <li><a href="../../pages/htmlInstrutor/registrarTreinoInstrutor.html">Treinos</a></li>
+                    <li><a href="../../pages/htmlInstrutor/agendaInstrutor.html">Agenda</a></li>
+                    <li><a href="../../../index.html">Sair</a></li>
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <div class="dashboard-content">
+
+            <section class="cards-info-container">
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_perfil_ativos.png" alt="">
+                        <h2>Aulas Hoje</h2>
+                    </div>
+                    <h1 id="aulasDiaInstrutor">4</h1>
+                </div>
+
+                <div class="card-info">
+                    <div class="card-info-nome">
+                        <img src="../../assets/icons/icone_total_alunos.png" alt="">
+                        <h2>Alunos Nas Suas Turmas</h2>
+                    </div>
+                    <h1 id="alunosTurma">41</h1>
+                </div>
+
+            </section>
+
+            <section class="lista-agenda">
+                <div class="menu-tabela">
+                    <h1>Agenda</h1>
+                    <input placeholder="Nome Do Evento">
+                    <button>Buscar Evento</button>
+                </div>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sábado</th>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        <tr>
+                            <th id="h">06:00</th>
+                            <td></td>
+                            <td>Aeróbica: Professora Mariana Souza Ribeiro</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Aeróbica: Professora Mariana Souza Ribeiro</td>
+                        </tr>
+
+                        <tr>
+                            <th>07:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>08:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>09:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>10:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>11:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>12:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>13:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>14:00</th>
+                            <td>Aeróbica: Professora Mariana Souza Ribeiro</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>15:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>16:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>17:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>18:00</th>
+                            <td></td>
+                            <td>Aeróbica: Professora Mariana Souza Ribeiro</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Aeróbica: Professora Mariana Souza Ribeiro</td>
+                        </tr>
+
+                        <tr>
+                            <th>19:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>20:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>21:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>22:00</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="lista-turmas">
+                <div class="menu-tabela">
+
+                    <h1>Lista De Turmas</h1>
+
+                    <input type="text" placeholder="Nome Da Turma">
+
+                    <button>
+                        Buscar Turma
+                    </button>
+
+                    <a href="../../pages/htmlAtendente/editarAlunoAtendente.html">
+                        Editar Turma
+                    </a>
+
+                    <a class="btn-cadastrar" href="../../pages/htmlAtendente/cadastrarAlunoAtendente.html">Cadastrar
+                        Nova Turma</a>
+
+                </div>
+                <table>
+                    <thead>
+                        <th>Turma</th>
+                        <th>Modalidade</th>
+                        <th>Dias</th>
+                        <th>Horário</th>
+                        <th>Quantidade De Alunos</th>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        <tr>
+                            <td>Spinning</td>
+                            <td>Spinning</td>
+                            <td>Segegunda, Quarta, Sexta</td>
+                            <td>07:00 - 08:00</td>
+                            <td>18 Alunos</td>
+                        </tr>
+                        <tr>
+                            <td>Fit Dance</td>
+                            <td>Aula De Dança</td>
+                            <td>Terça e Quinta</td>
+                            <td>09:00 - 10:00</td>
+                            <td>15 Alunos</td>
+                        </tr>
+                        <tr>
+                            <td>Musculação Funcional</td>
+                            <td>Aula De Musculação Guiada</td>
+                            <td>Segegunda e Quarta</td>
+                            <td>17:30 - 18:30</td>
+                            <td>8 Alunos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <div class="footer-content">
+
+            <img src="../../assets/images/imagem_logo.png">
+
+            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+
+            <a href="#">Suporte</a>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

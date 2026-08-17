@@ -1,0 +1,99 @@
+main{
+    display:flex;
+    min-height:100vh;
+    background:#111315;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1A1D21;
+    color:white;
+}
+
+.logo{
+    width:310px;
+    height:130px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 30px;
+}
+
+/* SOMENTE A FOTO DE PERFIL */
+.perfil > img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.perfil-texto h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.perfil-texto h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+}
+
+.perfil-texto-nome {
+    display: flex;
+    gap: 5px;
+}
+
+.sidebar{
+    width:220px;
+    background:#0B0E13;
+    flex-shrink:0;
+}
+
+.sidebar-content{
+    padding-top:50px;
+}
+
+.sidebar-content ul{
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    list-style:none;
+}
+
+.sidebar-content li{
+    color:white;
+    padding:10px 30px;
+    cursor:pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.sidebar-content a{
+    color:white;
+    text-decoration:none;
+}
+
+footer{
+    background:#1A1D21;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.footer-content img{
+    width:310px;
+    height:130px;
+}
+
+.footer-content p,
+.footer-content a{
+    color:white;
+    text-decoration: none;
+}
