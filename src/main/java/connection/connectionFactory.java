@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class connectionFactory {
 
-private static String URL = "jdbc:mysql://db:3309/FitZoneStudio?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
+private static String URL = "jdbc:mysql://localhost:3309/FitZoneStudio?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC";
 private static String USER = "root";
 private static String SENHA = "cimatec";
 private static String DRIVER = "com.mysql.cj.jdbc.Driver";
