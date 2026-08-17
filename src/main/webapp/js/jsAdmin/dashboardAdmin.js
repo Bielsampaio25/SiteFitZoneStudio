@@ -47,3 +47,17 @@ new Chart(ctx, {
         maintainAspectRatio:false
     }
 });
+
+async function TotalFuncionariosAtivos(){
+    try{
+        const resposta = await fetch("/SiteFitZoneStudio/api/dashboard");
+        const dados = await resposta.json();
+        document.getElementById("funcionariosAtivos").innerHTML = dados.FuncionariosAtivos;
+    }catch(erro){
+        console.error("Erro ao exibir o total de funcionarios ativos", erro);
+    }
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    TotalFuncionariosAtivos();
+});

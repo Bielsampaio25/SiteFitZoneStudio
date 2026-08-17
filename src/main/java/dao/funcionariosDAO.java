@@ -12,8 +12,8 @@ public class funcionariosDAO {
     String sql = "INSERT INTO Funcionarios " +
         "(nome, cpf, rg, dta_nascimento, telefone, email, sexo, salario, " +
         "dta_admissao, turno, estado, cidade, cep, bairro, endereco, " +
-        "numero, complemento, nome_usuario, senha) " +
-        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        "numero, complemento, nome_usuario, senha, situacao) " +
+        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     try (
         Connection conn = connectionFactory.getConnection();
@@ -39,6 +39,7 @@ public class funcionariosDAO {
         ps.setString(17, model.getComplemento());
         ps.setString(18, model.getnomeUsuario());
         ps.setString(19, model.getSenha());
+        ps.setString(20, model.getSituacao());
 
         ps.executeUpdate();
 
@@ -53,3 +54,4 @@ public class funcionariosDAO {
     }
 }
 }
+   

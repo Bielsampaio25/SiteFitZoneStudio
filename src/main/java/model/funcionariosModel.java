@@ -20,6 +20,7 @@ public class funcionariosModel {
     private String complemento;
     private String nomeUsuario;
     private String senha;
+    private String situacao;
 
     public String getNome(){
         return nome;
@@ -153,5 +154,12 @@ public class funcionariosModel {
 
     public void setSenha(String senha){
         this.senha = senha;
+    }
+    public String getSituacao(){
+        return situacao;
+    }
+
+    public void setSituacao(String situacao){
+        this.situacao = situacao;
     }
 }

@@ -58,6 +58,7 @@ public class funcionariosController extends HttpServlet {
         model.setComplemento(complemento);
         model.setnomeUsuario(nomeUsuario);
         model.setSenha(senha);
+        model.setSituacao("Ativo");
 
         funcionariosDAO dao = new funcionariosDAO();
 
