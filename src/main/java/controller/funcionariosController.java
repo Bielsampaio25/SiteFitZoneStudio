@@ -24,6 +24,7 @@ public class funcionariosController extends HttpServlet {
         String telefone = request.getParameter("telefone");
         String email = request.getParameter("email");
         String sexo = request.getParameter("sexo");
+        String cargo = request.getParameter("cargo");
         String salario = request.getParameter("salario");
         String dtaAdmissao = request.getParameter("dtaAdmissao");
         String turno = request.getParameter("turno");
@@ -46,6 +47,7 @@ public class funcionariosController extends HttpServlet {
         model.setTelefone(telefone);
         model.setEmail(email);
         model.setSexo(sexo);
+        model.setCargo(cargo);
         model.setSalario(salario);
         model.setdtaAdmissao(dtaAdmissao);
         model.setTurno(turno);

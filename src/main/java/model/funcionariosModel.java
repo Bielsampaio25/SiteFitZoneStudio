@@ -8,6 +8,7 @@ public class funcionariosModel {
     private String telefone;
     private String email;
     private String sexo;
+    private String cargo;
     private String salario;
     private String dtaAdmissao;
     private String turno;
@@ -71,6 +72,15 @@ public class funcionariosModel {
     public void setSexo(String sexo){
         this.sexo = sexo;
     }
+    
+    public String getCargo(){
+        return cargo;
+    }
+
+    public void setCargo(String cargo){
+        this.cargo = cargo;
+    }
+    
     public String getSalario(){
         return salario;
     }

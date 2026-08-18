@@ -16,7 +16,7 @@ CREATE TABLE Administradores(
              complemento VARCHAR(50));
              
 CREATE TABLE Funcionarios(
-			 codigo INT PRIMARY KEY AUTO_INCREMENT,
+	     codigo INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              cpf VARCHAR(50),
              rg VARCHAR(50),
@@ -24,6 +24,7 @@ CREATE TABLE Funcionarios(
              telefone VARCHAR(50),
              email VARCHAR(50),
              sexo VARCHAR(20),
+             cargo VARCHAR(50),
              salario DECIMAL(10,2),
              situacao VARCHAR(20),
              dta_admissao DATE,
