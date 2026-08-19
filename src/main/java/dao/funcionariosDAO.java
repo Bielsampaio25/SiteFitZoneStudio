@@ -69,11 +69,14 @@ public class funcionariosDAO {
             while (rs.next()) {
                 funcionariosModel model = new funcionariosModel();
                 
+                
+                model.setCodigo(rs.getInt("codigo"));
                 model.setNome(rs.getString("nome"));
                 model.setCargo(rs.getString("cargo"));
                 model.setTelefone(rs.getString("telefone"));
                 model.setEmail(rs.getString("email"));
                 model.setSituacao(rs.getString("situacao"));
+                model.setdtaAdmissao(rs.getString("dta_admissao"));
                 
                 lista.add(model);
             }

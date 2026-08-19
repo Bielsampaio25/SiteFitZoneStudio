@@ -45,10 +45,13 @@ async function ListarFuncionarios() {
             linhas += `
                 <tr>
                     <td>${funcionario.nome}</td>
+                    <td>${funcionario.codigo}</td>
                     <td>${funcionario.cargo}</td>
                     <td>${funcionario.telefone}</td>
                     <td>${funcionario.email}</td>
                     <td>${funcionario.situacao}</td>
+                    <td>${funcionario.dtaAdmissao}</td>
+                    <td><div class="tabela-acoes"><img src="../../assets/icons/icone_remover.png" alt="botão para remover o funcionário" id="btnRemover"></div></td>
                 </tr>
             `;
         });

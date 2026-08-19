@@ -16,7 +16,7 @@ CREATE TABLE Administradores(
              complemento VARCHAR(50));
              
 CREATE TABLE Funcionarios(
-	     codigo INT PRIMARY KEY AUTO_INCREMENT,
+	         codigo INT PRIMARY KEY AUTO_INCREMENT,
              nome VARCHAR(50),
              cpf VARCHAR(50),
              rg VARCHAR(50),
@@ -101,3 +101,14 @@ CREATE TABLE Despesas(
              descricao VARCHAR(50),
              dta_pagamento DATE,
              valor DECIMAL(10,2));
+             
+DELIMITER //
+
+CREATE TRIGGER gerar_codigo_funcionario
+BEFORE INSERT ON funcionarios
+FOR EACH ROW
+BEGIN
+    SET NEW.codigo = LPAD(FLOOR(RAND() * 10000000), 7, '0');
+END //
+
+DELIMITER ;
