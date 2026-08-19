@@ -15,7 +15,7 @@ import dao.funcionariosDAO;
 import model.funcionariosModel;
 import java.util.List;
 
-@WebServlet("/api/funcionarios")
+@WebServlet("/api/funcionarios/*")
 public class funcionariosAdminController extends HttpServlet {
 
     @Override
@@ -45,6 +45,23 @@ public class funcionariosAdminController extends HttpServlet {
             response.setCharacterEncoding("UTF-8");
 
             response.getWriter().write(json);
+        }
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
+
+        String codigo = request.getPathInfo().substring(1);
+
+        funcionariosDAO dao = new funcionariosDAO();
+
+        boolean removido = dao.removerFuncionario(codigo);
+
+        if (removido) {
+            response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+        } else {
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }
     }
 

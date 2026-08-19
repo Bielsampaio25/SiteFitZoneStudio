@@ -402,27 +402,14 @@ tbody tr:hover {
     color: #F50C0C;
 }
 
-.tabela-acoes {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 12px;
-}
-
-.tabela-acoes img {
+.btnRemover {
     width: 24px;
-
     height: 24px;
-
     cursor: pointer;
-
     transition: .2s ease;
 }
 
-.tabela-acoes img:hover {
+.btnRemover:hover {
     transform: scale(1.1);
 }
 

@@ -31,19 +31,19 @@ async function TotalFuncionariosDesligados() {
 async function ListarFuncionarios() {
     try {
         const resposta = await fetch(
-            "/SiteFitZoneStudio/api/funcionarios?situacao=listar"
-        );
+                "/SiteFitZoneStudio/api/funcionarios?situacao=listar"
+                );
 
         const funcionarios = await resposta.json();
 
         const tabelaFuncionarios =
-            document.getElementById("corpoTabela");
+                document.getElementById("corpoTabela");
 
         let linhas = "";
 
         funcionarios.forEach(funcionario => {
             linhas += `
-                <tr>
+                <tr data-codigo="${funcionario.codigo}">
                     <td>${funcionario.nome}</td>
                     <td>${funcionario.codigo}</td>
                     <td>${funcionario.cargo}</td>
@@ -51,12 +51,30 @@ async function ListarFuncionarios() {
                     <td>${funcionario.email}</td>
                     <td>${funcionario.situacao}</td>
                     <td>${funcionario.dtaAdmissao}</td>
-                    <td><div class="tabela-acoes"><img src="../../assets/icons/icone_remover.png" alt="botão para remover o funcionário" id="btnRemover"></div></td>
+                    <td><div><img src="../../assets/icons/icone_remover.png" alt="botão para remover o funcionário" class="btnRemover" data-codigo="${funcionario.codigo}"></div></td>
                 </tr>
             `;
         });
 
         tabelaFuncionarios.innerHTML = linhas;
+
+        document.addEventListener("click", async (event) => {
+
+            if (!event.target.classList.contains("btnRemover")) {
+                return;
+            }
+
+            const codigo = event.target.dataset.codigo;
+
+            const response = await fetch(`/SiteFitZoneStudio/api/funcionarios/${codigo}`, {
+                method: "DELETE"
+            });
+
+            if (response.ok) {
+                const linha = event.target.closest("tr");
+                linha.remove();
+            }
+        });
 
     } catch (erro) {
         console.error("Erro ao listar funcionário:", erro);
