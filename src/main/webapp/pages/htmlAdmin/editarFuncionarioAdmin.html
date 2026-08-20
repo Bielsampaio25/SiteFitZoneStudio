@@ -1,183 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/cssAdmin/editarFuncionarioAdmin.css">
-    <title>Editar Funcionario</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/reset.css">
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/cssAdmin/editarFuncionarioAdmin.css">
+        <title>Editar Funcionario</title>
+    </head>
 
-<body>
-    <header>
-        <nav class="navbar">
-            <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
-            <div class="perfil">
-                <img src="../../assets/images/Ellipse 1.png" alt="">
-                <div class="perfil-texto">
-                    <h1>Carlos Santana</h1>
-                    <h2>Administrador</h2>
+    <body>
+        <header>
+            <nav class="navbar">
+                <img src="../../assets/images/imagem_logo.png" alt="" class="logo">
+                <div class="perfil">
+                    <img src="../../assets/images/Ellipse 1.png" alt="">
+                    <div class="perfil-texto">
+                        <h1>Carlos Santana</h1>
+                        <h2>Administrador</h2>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <ul>
-                    <li><a href="../../pages/htmlAdmin/dashboardAdmin.html">Dashboard</a></li>
-                    <li id="funcionarios"><a href="../../pages/htmlAdmin/funcionariosAdmin.html">Funcionarios</a></li>
-                    <li><a href="../../pages/htmlAdmin/alunosAdmin.html">Alunos</a></li>
-                    <li><a href="../../pages/htmlAdmin/financeiroAdmin.html">Financeiro</a></li>
-                    <li><a href="../../pages/htmlAdmin/agendaAdmin.html">Agenda</a></li>
-                    <li><a href="../../pages/htmlAdmin/cadastrarDespesaAdmin.html">Despesa</a></li>
-                    <li><a href="../../../index.html">Sair</a></li>
-                </ul>
-            </div>
-        </aside>
+        <main>
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <ul>
+                        <li><a href="../../pages/htmlAdmin/dashboardAdmin.html">Dashboard</a></li>
+                        <li id="funcionarios"><a href="../../pages/htmlAdmin/funcionariosAdmin.html">Funcionarios</a></li>
+                        <li><a href="../../pages/htmlAdmin/alunosAdmin.html">Alunos</a></li>
+                        <li><a href="../../pages/htmlAdmin/financeiroAdmin.html">Financeiro</a></li>
+                        <li><a href="../../pages/htmlAdmin/agendaAdmin.html">Agenda</a></li>
+                        <li><a href="../../pages/htmlAdmin/cadastrarDespesaAdmin.html">Despesa</a></li>
+                        <li><a href="../../../index.html">Sair</a></li>
+                    </ul>
+                </div>
+            </aside>
 
-        <form action="/editarFuncionario" method="post" class="formulario">
-            <h1>Editar Funcionario</h1>
-            <div class="topo-formulario">
-                <div class="campo-busca">
-                    <div class="campo">
-                        <label for="codigo">Buscar Funcionário</label>
-                        <div class="input-com-botao">
-                            <input type="text" name="codigo" id="codigo" placeholder="Digite o código do funcionario">
-                            <button type="button" class="btnBuscar" id="btnBuscarFuncionario">Buscar</button>
+            <form action="/editarFuncionario" method="post" class="formulario">
+                <h1>Editar Funcionario</h1>
+                <div class="topo-formulario">
+                    <div class="campo-busca">
+                        <div class="campo">
+                            <label for="codigo">Buscar Funcionário</label>
+                            <div class="input-com-botao">
+                                <input type="text" name="codigo" id="codigo" placeholder="Digite o código do funcionário">
+                                <button type="button" id="btnBuscar">Buscar funcionário</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foto-secao">
+                        <div class="foto-perfil-container">
+                            <img id="preview" hidden>
+                            <div class="foto-perfil-content" id="textoUpload">
+                                <h2>Foto de Perfil</h2>
+                            </div>
+                        </div>
+                        <div class="btnMudarFoto" id="btnMudarFoto">
+                            <label for="foto">Mudar imagem</label>
+                            <input type="file" id="foto" accept="image/*" hidden>
                         </div>
                     </div>
                 </div>
-                <div class="foto-secao">
-                    <div class="foto-perfil-container">
-                        <img id="preview" hidden>
-                        <div class="foto-perfil-content" id="textoUpload">
-                            <h2>Foto de Perfil</h2>
+                <div class="formulario-content">
+                    <div class="formulario-content-campos">
+                        <div class="campo">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" name="nomeUsuario" id="users">
+                        </div>
+                        <div class="campo">
+                            <label for="cpf">CPF</label>
+                            <input type="text" name="cpf" id="cpf">
+                        </div>
+                        <div class="campo">
+                            <label for="dtaNascimento">Data de Nascimento</label>
+                            <input type="date" name="dtaNascimento" id="dtaNascimento">
+                        </div>
+                        <div class="campo">
+                            <label for="sexo">Sexo</label>
+                            <select name="sexo" id="sexo">
+                                <option value="Não Selecionado">Selecione uma opção</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Feminino">Feminino</option>
+                                <option value="Não-Binário">Não-Binário</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="campo">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" name="telefone" id="telefone">
+                        </div>
+                        <div class="campo">
+                            <label for="rg">RG</label>
+                            <input type="text" name="rg" id="rg">
+                        </div>
+                        <div class="campo">
+                            <label for="dtaAdmissao">Data De Admissão</label>
+                            <input type="date" name="dtaAdmissao" id="dtaAdmissao">
+                        </div>
+                        <div class="campo">
+                            <label for="turno">Turno De Trabalho</label>
+                            <select name="turno" id="turno">
+                                <option value="0"></option>
+                                <option value="1">Matutino</option>
+                                <option value="2">Vespertino</option>
+                                <option value="3">Noturno</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="btnMudarFoto" id="btnMudarFoto">
-                        <label for="foto">Mudar imagem</label>
-                        <input type="file" id="foto" accept="image/*" hidden>
-                    </div>
-                </div>
-            </div>
-            <div class="formulario-content">
-                <div class="formulario-content-campos">
-                    <div class="campo">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" name="nome" id="nome">
-                    </div>
-                    <div class="campo">
-                        <label for="cpf">CPF</label>
-                        <input type="text" name="cpf" id="cpf">
-                    </div>
-                    <div class="campo">
-                        <label for="dtaNascimento">Data de Nascimento</label>
-                        <input type="date" name="dtaNascimento" id="dtaNascimento">
-                    </div>
-                    <div class="campo">
-                        <label for="sexo">Sexo</label>
-                        <select name="sexo" id="sexo">
-                            <option value="0">Selecione uma opção</option>
-                            <option value="1">Masculino</option>
-                            <option value="2">Feminino</option>
-                            <option value="3">Não-Binário</option>
-                        </select>
-                    </div>
-                    <div class="campo">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="campo">
-                        <label for="telefone">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone">
-                    </div>
-                    <div class="campo">
-                        <label for="rg">RG</label>
-                        <input type="text" name="rg" id="rg">
-                    </div>
-                    <div class="campo">
-                        <label for="dtaAdmissao">Data De Admissão</label>
-                        <input type="date" name="dtaAdmissao" id="dtaAdmissao">
-                    </div>
-                    <div class="campo">
-                        <label for="turno">Turno De Trabalho</label>
-                        <select name="turno">
-                            <option value="0" id="turno"></option>
-                            <option value="1">Matutino</option>
-                            <option value="2">Vespertino</option>
-                            <option value="3">Noturno</option>
-                        </select>
-                    </div>
-                </div>
 
-                <div class="formulario-content-campos">
-                    <div class="campo">
-                        <label for="users">Nome de Usuário</label>
-                        <input type="text" name="users" id="users">
-                    </div>
-                    <div class="campo">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                    <div class="campo">
-                        <label for="salario">Salário</label>
-                        <input type="text" name="salario" id="salario">
-                    </div>
-                    <div class="campo">
-                        <label for="cep">CEP</label>
-                        <input type="text" name="cep" id="cep">
-                    </div>
-                    <div class="campo">
-                        <label for="estado">Estado</label>
-                        <input type="text" name="estado" id="estado">
-                    </div>
-                    <div class="campo">
-                        <label for="cidade">Cidade</label>
-                        <input type="text" name="cidade" id="cidade">
-                    </div>
-                    <div class="campo">
-                        <label for="bairro">Bairro</label>
-                        <input type="text" name="bairro" id="bairro">
-                    </div>
-                    <div class="campo">
-                        <label for="endereco">Endereço</label>
-                        <input type="text" name="endereco" id="endereco">
-                    </div>
-                    <div class="campo">
-                        <label for="numero">Número</label>
-                        <input type="text" name="numero" id="numero">
-                    </div>
-                    <div class="campo">
-                        <label for="complemento">Complemento</label>
-                        <input type="text" name="complemento" id="complemento">
+                    <div class="formulario-content-campos">
+                        <div class="campo">
+                            <label for="users">Nome de Usuário</label>
+                            <input type="text" name="users" id="users">
+                        </div>
+                        <div class="campo">
+                            <label for="password">Senha</label>
+                            <input type="password" name="senha" id="password">
+                        </div>
+                        <div class="campo">
+                            <label for="salario">Salário</label>
+                            <input type="text" name="salario" id="salario">
+                        </div>
+                        <div class="campo">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" id="cep">
+                        </div>
+                        <div class="campo">
+                            <label for="estado">Estado</label>
+                            <input type="text" name="estado" id="estado">
+                        </div>
+                        <div class="campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" name="cidade" id="cidade">
+                        </div>
+                        <div class="campo">
+                            <label for="bairro">Bairro</label>
+                            <input type="text" name="bairro" id="bairro">
+                        </div>
+                        <div class="campo">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco">
+                        </div>
+                        <div class="campo">
+                            <label for="numero">Número</label>
+                            <input type="text" name="numero" id="numero">
+                        </div>
+                        <div class="campo">
+                            <label for="complemento">Complemento</label>
+                            <input type="text" name="complemento" id="complemento">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="botoes">
-                <div class="btnCancelar">
-                    <a href="../../pages/htmlAdmin/funcionariosAdmin.html">Cancelar</a>
+                <div class="botoes">
+                    <div class="btnCancelar">
+                        <a href="../../pages/htmlAdmin/funcionariosAdmin.html">Cancelar</a>
+                    </div>
+                    <div class="btnCadastro">
+                        <button type="button">Editar</button>
+                    </div>
                 </div>
-                <div class="btnCadastro">
-                    <button type="button">Editar</button>
-                </div>
-            </div>
-        </form>
-    </main>
+            </form>
+        </main>
 
-    <script src="../../js/jsAdmin/fotoPerfil.js"></script>
+        <script src="../../js/jsAdmin/fotoPerfil.js"></script>
+        <script src="../../js/jsAdmin/funcionariosAdmin.js"></script>
 
-    <footer>
-        <hr>
-        <div class="footer-content">
-            <img src="../../assets/images/imagem_logo.png" alt="">
-            <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
-            <a>Suporte</a>
-        </div>
-    </footer>
-</body>
+        <footer>
+            <hr>
+            <div class="footer-content">
+                <img src="../../assets/images/imagem_logo.png" alt="">
+                <p>&copy;2026 FitZone Studio. Todos os direitos reservados.</p>
+                <a>Suporte</a>
+            </div>
+        </footer>
+    </body>
 
 </html>

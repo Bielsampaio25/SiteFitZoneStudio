@@ -34,6 +34,7 @@ public class funcionariosAdminController extends HttpServlet {
 
         } else if ("desligados".equals(situacao)) {
             FuncionariosDesligados(response);
+
         } else if ("listar".equals(situacao)) {
 
             List<funcionariosModel> listarFuncionarios
@@ -43,6 +44,20 @@ public class funcionariosAdminController extends HttpServlet {
 
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
+
+            response.getWriter().write(json);
+
+        } else if ("buscar".equals(situacao)) {
+
+            int codigo = Integer.parseInt(request.getParameter("codigo"));
+
+            funcionariosModel funcionario
+                    = funcionariosDAO.BuscarFuncionario(codigo);
+
+            response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
+
+            String json = new Gson().toJson(funcionario);
 
             response.getWriter().write(json);
         }

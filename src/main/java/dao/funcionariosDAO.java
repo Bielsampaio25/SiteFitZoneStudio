@@ -87,11 +87,11 @@ public class funcionariosDAO {
 
         String sql = "DELETE FROM Funcionarios WHERE codigo = ?";
 
-        try (Connection conn = connectionFactory.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = connectionFactory.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
-            stmt.setString(1, codigo);
+            ps.setString(1, codigo);
 
-            int linhasAfetadas = stmt.executeUpdate();
+            int linhasAfetadas = ps.executeUpdate();
 
             return linhasAfetadas > 0;
 
@@ -100,4 +100,56 @@ public class funcionariosDAO {
             return false;
         }
     }
+
+    public funcionariosModel BuscarFuncionario(int codigo) {
+
+    funcionariosModel model = null;
+
+    String sql = "SELECT * FROM Funcionarios WHERE codigo = ?";
+
+    try (
+        Connection conn = connectionFactory.getConnection();
+        PreparedStatement stmt = conn.prepareStatement(sql)
+    ) {
+
+        stmt.setInt(1, codigo);
+
+        try (ResultSet rs = stmt.executeQuery()) {
+
+            if (rs.next()) {
+
+                model = new funcionariosModel();
+
+                model.setCodigo(rs.getInt("codigo"));
+                model.setNome(rs.getString("nome"));
+                model.setCpf(rs.getString("cpf"));
+                model.setRg(rs.getString("rg"));
+                model.setDtaNascimento(rs.getString("dta_nascimento"));
+                model.setTelefone(rs.getString("telefone"));
+                model.setEmail(rs.getString("email"));
+                model.setSexo(rs.getString("sexo"));
+                model.setCargo(rs.getString("cargo"));
+                model.setSalario(rs.getString("salario"));
+                model.setdtaAdmissao(rs.getString("dta_admissao"));
+                model.setTurno(rs.getString("turno"));
+                model.setEstado(rs.getString("estado"));
+                model.setCidade(rs.getString("cidade"));
+                model.setCep(rs.getString("cep"));
+                model.setBairro(rs.getString("bairro"));
+                model.setEndereco(rs.getString("endereco"));
+                model.setNumero(rs.getString("numero"));
+                model.setComplemento(rs.getString("complemento"));
+                model.setnomeUsuario(rs.getString("nome_usuario"));
+                model.setSenha(rs.getString("senha"));
+                model.setSituacao(rs.getString("situacao"));
+            }
+
+        }
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return model;
+}
 }

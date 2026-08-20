@@ -33,14 +33,10 @@ async function ListarFuncionarios() {
         const resposta = await fetch(
                 "/SiteFitZoneStudio/api/funcionarios?situacao=listar"
                 );
-
         const funcionarios = await resposta.json();
-
         const tabelaFuncionarios =
                 document.getElementById("corpoTabela");
-
         let linhas = "";
-
         funcionarios.forEach(funcionario => {
             linhas += `
                 <tr data-codigo="${funcionario.codigo}">
@@ -55,9 +51,7 @@ async function ListarFuncionarios() {
                 </tr>
             `;
         });
-
         tabelaFuncionarios.innerHTML = linhas;
-
         document.addEventListener("click", async (event) => {
 
             if (!event.target.classList.contains("btnRemover")) {
@@ -65,21 +59,96 @@ async function ListarFuncionarios() {
             }
 
             const codigo = event.target.dataset.codigo;
-
             const response = await fetch(`/SiteFitZoneStudio/api/funcionarios/${codigo}`, {
                 method: "DELETE"
             });
-
             if (response.ok) {
                 const linha = event.target.closest("tr");
                 linha.remove();
             }
         });
-
     } catch (erro) {
         console.error("Erro ao listar funcionário:", erro);
     }
 }
+
+const btnBuscar = document.getElementById("btnBuscar");
+
+btnBuscar.addEventListener("click", BuscarFuncionario);
+
+async function BuscarFuncionario() {
+
+    console.log("Botão clicado!");
+
+    const codigo = document.getElementById("codigo").value.trim();
+
+    console.log("Código:", codigo);
+
+    if (!codigo) {
+        alert("Digite o código do funcionário.");
+        return;
+    }
+
+    try {
+
+        const resposta = await fetch(
+            `/SiteFitZoneStudio/api/funcionarios?codigo=${codigo}&situacao=buscar`
+        );
+
+        console.log("Status:", resposta.status);
+
+        if (!resposta.ok) {
+            throw new Error("Erro ao buscar funcionário.");
+        }
+
+        const funcionario = await resposta.json();
+
+        console.log("Funcionário:", funcionario);
+
+        if (!funcionario) {
+            alert("Funcionário não encontrado.");
+            return;
+        }
+
+        document.querySelectorAll("input[name]").forEach(input => {
+
+            if (input.name === "codigo") {
+                return;
+            }
+
+            const valor = funcionario[input.name];
+
+            if (valor !== undefined && valor !== null) {
+                input.placeholder = valor;
+            }
+
+        });
+
+        document.getElementById("sexo").value = funcionario.sexo || "";
+
+        document.getElementById("turno").textContent =
+            funcionario.turno || "";
+
+        document.getElementById("salario").placeholder =
+            funcionario.salario || "";
+
+        document.getElementById("users").placeholder =
+            funcionario.nomeUsuario || "";
+
+        document.getElementById("password").placeholder =
+            funcionario.senha || "";
+
+    } catch (erro) {
+
+        console.error("Erro:", erro);
+
+    }
+}
+
+document.getElementById("btnBuscar").addEventListener(
+    "click",
+    BuscarFuncionario
+);
 
 window.addEventListener("DOMContentLoaded", () => {
     TotalFuncionarios();
